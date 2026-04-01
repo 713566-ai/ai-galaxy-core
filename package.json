@@ -1,0 +1,9 @@
+{
+  "name": "ai-galaxy-core",
+  "version": "1.0.0",
+  "description": "AI Galaxy Core for Weak PC",
+  "main": "main.js",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

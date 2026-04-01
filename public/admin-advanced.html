@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Galaxy Core - Advanced Admin</title>
+    <style>
+        /* Стили как в предыдущей версии, плюс новые */
+        .tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+        .tab {
+            padding: 10px 20px;
+            background: rgba(0,0,0,0.3);
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .tab.active {
+            background: #4CAF50;
+            transform: scale(1.05);
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        .metric-card {
+            background: rgba(0,0,0,0.3);
+            padding: 15px;
+            border-radius: 10px;
+            margin: 10px 0;
+        }
+        .progress-bar {
+            width: 100%;
+            height: 30px;
+            background: rgba(0,0,0,0.3);
+            border-radius: 15px;
+            overflow: hidden;
+            margin: 10px 0;
+        }
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #4CAF50, #8BC34A);
+            transition: width 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 12px;
+        }
+        .command-input {
+            width: 100%;
+            padding: 10px;
+            background: rgba(0,0,0,0.3);
+            border: 1px solid #4CAF50;
+            color: white;
+            border-radius: 5px;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+    <div class="admin-container">
+        <div class="header">
+            <div class="title">🚀 AI Galaxy Core - Расширенная админ-панель</div>
+            <div class="subtitle">v2.0 - Полный контроль над вселенной</div>
+        </div>
+        
+        <div class="tabs">
+            <div class="tab active" onclick="switchTab('dashboard')">📊 Дашборд</div>
+            <div class="tab" onclick="switchTab('economy')">💰 Экономика</div>
+            <div class="tab" onclick="switchTab('agents')">🤖 Агенты</div>
+            <div class="tab" onclick="switchTab('analytics')">📈 Аналитика</div>
+            <div class="tab" onclick="switchTab('commands')">⌨️ Команды</div>
+            <div class="tab" onclick="switchTab('system')">⚙️ Система</div>
+        </div>
+        
+        <!-- Дашборд -->
+        <div id="dashboard" class="tab-content active">
+            <div class="grid">
+                <div class="card">
+                    <h2>📊 Основные метрики</h2>
+                    <div id="dashboard-stats"></div>
+                </div>
+                <div class="card">
+                    <h2>🏆 Топ-5 по богатству</h2>
+                    <div id="top-wealth"></div>
+                </div>
+            </div>
+            <div class="card">
+                <h2>📈 Живой график</h2>
+                <canvas id="liveChart"></canvas>
+            </div>
+        </div>
+        
+        <!-- Экономика -->
+        <div id="economy" class="tab-content">
+            <div class="grid">
+                <div class="card">
+                    <h2>💰 Рынок</h2>
+                    <div id="market-detailed"></div>
+                </div>
+                <div class="card">
+                    <h2>⚖️ Неравенство</h2>
+                    <div id="inequality-stats"></div>
+                </div>
+            </div>
+            <div class="card">
+                <h2>💎 Общее богатство</h2>
+                <canvas id="totalWealthChart"></canvas>
+            </div>
+        </div>
+        
+        <!-- Агенты -->
+        <div id="agents" class="tab-content">
+            <div class="card">
+                <h2>🔍 Поиск агента</h2>
+                <input type="number" id="agentSearch" placeholder="ID агента" class="command-input">
+                <button onclick="searchAgent()">Найти</button>
+                <div id="agent-details"></div>
+            </div>
+            <div class="card">
+                <h2>🎭 Все роли</h2>
+                <div id="all-roles"></div>
+            </div>
+        </div>
+        
+        <!-- Аналитика -->
+        <div id="analytics" class="tab-content">
+            <div class="card">
+                <h2>📊 Прогноз популяции</h2>
+                <div id="forecast"></div>
+            </div>
+            <div class="card">
+                <h2>🔄 Корреляции</h2>
+                <div id="correlations"></div>
+            </div>
+        </div>
+        
+        <!-- Команды -->
+        <div id="commands" class="tab-content">
+            <div class="card">
+                <h2>⌨️ Консоль управления</h2>
+                <textarea id="commandInput" class="command-input" rows="3" placeholder="Введите команду..."></textarea>
+                <button onclick="executeCommand()">Выполнить</button>
+                <div id="commandOutput" style="margin-top: 20px; background: rgba(0,0,0,0.3); padding: 10px; border-radius: 5px; font-family: monospace;"></div>
+                <div style="margin-top: 10px;">
+                    <h3>Доступные команды:</h3>
+                    <code>give [id] [resource] [amount]</code><br>
+                    <code>kill [id]</code><br>
+                    <code>add-money [id] [amount]</code><br>
+                    <code>god-mode [id]</code><br>
+                    <code>list-roles</code><br>
+                    <code>economy-stats</code>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Система -->
+        <div id="system" class="tab-content">
+            <div class="card">
+                <h2>⚙️ Системная информация</h2>
+                <div id="system-info"></div>
+            </div>
+            <div class="card">
+                <h2>💾 Управление сохранениями</h2>
+                <button onclick="listSaves()">📋 Список сохранений</button>
+                <button onclick="exportFullData()">📤 Экспорт всего</button>
+                <button onclick="importData()">📥 Импорт данных</button>
+                <div id="save-list"></div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        let liveChart;
+        let chartData = [];
+        
+        function switchTab(tabName) {
+            document.querySelectorAll('.tab-content').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            document.querySelectorAll('.tab').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            document.getElementById(tabName).classList.add('active');
+            event.target.classList.add('active');
+        }
+        
+        async function loadTopWealth() {
+            const response = await fetch('/api/top/wealth');
+            const data = await response.json();
+            let html = '';
+            data.agents.slice(0, 5).forEach((agent, i) => {
+                html += `<div class="metric-card">
+                    ${i+1}. #${agent.id} (${agent.role}) - 💰 ${agent.wealth} | ⚡ ${agent.energy}
+                </div>`;
+            });
+            document.getElementById('top-wealth').innerHTML = html;
+        }
+        
+        async function loadInequality() {
+            const response = await fetch('/api/inequality');
+            const data = await response.json();
+            document.getElementById('inequality-stats').innerHTML = `
+                <div class="metric-card">
+                    <strong>Коэффициент Джини:</strong> ${data.gini}
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: ${data.gini * 100}%">${(data.gini * 100).toFixed(1)}%</div>
+                    </div>
+                </div>
+                <div class="metric-card">
+                    <strong>10% беднейших:</strong> 💰 ${data.wealthPercentiles.p10}<br>
+                    <strong>Медиана:</strong> 💰 ${data.wealthPercentiles.p50}<br>
+                    <strong>10% богатейших:</strong> 💰 ${data.wealthPercentiles.p90}
+                </div>
+            `;
+        }
+        
+        async function loadSystemInfo() {
+            const response = await fetch('/api/system');
+            const data = await response.json();
+            document.getElementById('system-info').innerHTML = `
+                <div class="metric-card">⏱️ Время работы: ${Math.floor(data.uptime / 60)} мин</div>
+                <div class="metric-card">💾 Память: ${data.memory.heapUsed} / ${data.memory.heapTotal}</div>
+                <div class="metric-card">🟢 Node.js: ${data.nodeVersion}</div>
+                <div class="metric-card">🖥️ Платформа: ${data.platform}</div>
+            `;
+        }
+        
+        async function searchAgent() {
+            const id = document.getElementById('agentSearch').value;
+            const response = await fetch('/api/agents');
+            const data = await response.json();
+            const agent = data.agents.find(a => a.id == id);
+            
+            if (agent) {
+                let inventoryHtml = '';
+                for (const [res, amount] of Object.entries(agent.inventory)) {
+                    inventoryHtml += `<div>${res}: ${Math.floor(amount)}</div>`;
+                }
+                document.getElementById('agent-details').innerHTML = `
+                    <div class="metric-card">
+                        <h3>Агент #${agent.id}</h3>
+                        <div>🎭 Роль: ${agent.role}</div>
+                        <div>💰 Богатство: ${agent.wealth}</div>
+                        <div>⚡ Энергия: ${agent.energy}</div>
+                        <div>🎂 Возраст: ${agent.age}</div>
+                        <div>📦 Инвентарь:</div>
+                        ${inventoryHtml}
+                    </div>
+                `;
+            } else {
+                document.getElementById('agent-details').innerHTML = '<div class="metric-card">❌ Агент не найден</div>';
+            }
+        }
+        
+        async function executeCommand() {
+            const command = document.getElementById('commandInput').value;
+            const output = document.getElementById('commandOutput');
+            output.innerHTML += `\n> ${command}\n`;
+            
+            // Парсим команду
+            const parts = command.split(' ');
+            const cmd = parts[0];
+            
+            switch(cmd) {
+                case 'give':
+                    if (parts.length === 4) {
+                        const id = parts[1];
+                        const resource = parts[2];
+                        const amount = parseInt(parts[3]);
+                        try {
+                            const response = await fetch(`/api/add-resources/${id}`, {
+                                method: 'POST',
+                                headers: {'Content-Type': 'application/json'},
+                                body: JSON.stringify({resource, amount})
+                            });
+                            const data = await response.json();
+                            output.innerHTML += `✅ ${data.success ? 'Успешно' : 'Ошибка'}\n`;
+                        } catch(e) {
+                            output.innerHTML += `❌ Ошибка: ${e.message}\n`;
+                        }
+                    }
+                    break;
+                case 'list-roles':
+                    const rolesResp = await fetch('/api/roles');
+                    const roles = await rolesResp.json();
+                    output.innerHTML += `Роли: ${JSON.stringify(roles.roles, null, 2)}\n`;
+                    break;
+                case 'economy-stats':
+                    const statsResp = await fetch('/api/inequality');
+                    const stats = await statsResp.json();
+                    output.innerHTML += `Джини: ${stats.gini}\n`;
+                    break;
+                default:
+                    output.innerHTML += `❌ Неизвестная команда: ${cmd}\n`;
+            }
+            
+            output.scrollTop = output.scrollHeight;
+        }
+        
+        async function exportFullData() {
+            const response = await fetch('/api/history');
+            const data = await response.json();
+            const blob = new Blob([JSON.stringify(data, null, 2)], {type: 'application/json'});
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `full-export-${Date.now()}.json`;
+            a.click();
+        }
+        
+        // Обновление всех данных
+        async function refreshAll() {
+            await Promise.all([
+                loadTopWealth(),
+                loadInequality(),
+                loadSystemInfo()
+            ]);
+        }
+        
+        setInterval(refreshAll, 5000);
+        refreshAll();
+    </script>
+</body>
+</html>
