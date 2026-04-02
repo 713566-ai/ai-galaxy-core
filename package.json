@@ -4,6 +4,14 @@
   "description": "AI Galaxy Core for Weak PC",
   "main": "main.js",
   "dependencies": {
-    "express": "^4.18.2"
+    "axios": "^1.14.0",
+    "crypto-js": "^4.2.0",
+    "dotenv": "^17.4.0",
+    "express": "^4.18.2",
+    "express-rate-limit": "^8.3.2",
+    "jsonwebtoken": "^9.0.3",
+    "node-telegram-bot-api": "^0.67.0",
+    "pg": "^8.20.0",
+    "ws": "^8.20.0"
   }
 }
