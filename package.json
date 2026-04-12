@@ -4,7 +4,7 @@
   "description": "AI Galaxy Core for Weak PC",
   "main": "main.js",
   "dependencies": {
-    "axios": "^1.14.0",
+    "axios": "^1.15.0",
     "crypto-js": "^4.2.0",
     "dotenv": "^17.4.0",
     "express": "^4.22.1",
