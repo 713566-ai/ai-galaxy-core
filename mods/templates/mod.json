@@ -1,0 +1,8 @@
+{
+    "name": "Название мода",
+    "version": "1.0.0",
+    "author": "Автор",
+    "description": "Описание мода",
+    "freelancer-style": true,
+    "requires": []
+}

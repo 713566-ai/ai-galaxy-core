@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Клиентский дашборд - AI Galaxy Core</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: white;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .header h1 {
+            font-size: 2em;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .card {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 20px;
+        }
+
+        .card h2 {
+            margin-bottom: 15px;
+            border-left: 3px solid #4CAF50;
+            padding-left: 15px;
+        }
+
+        .stat-value {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #4CAF50;
+        }
+
+        .market-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .market-price {
+            font-weight: bold;
+            color: #FFD700;
+        }
+
+        .agent-card {
+            background: rgba(0,0,0,0.3);
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .agent-card:hover {
+            background: rgba(76,175,80,0.3);
+        }
+
+        canvas {
+            max-height: 300px;
+            width: 100%;
+        }
+
+        button {
+            background: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            margin: 5px;
+        }
+
+        button:hover {
+            transform: scale(1.02);
+        }
+
+        .refresh-btn {
+            background: #2196F3;
+        }
+
+        .api-key {
+            background: rgba(0,0,0,0.5);
+            padding: 10px;
+            border-radius: 8px;
+            font-family: monospace;
+            word-break: break-all;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            padding: 20px;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🚀 AI Galaxy Core - Клиентский дашборд</h1>
+            <p>Реальное время | AI агенты | Динамическая экономика</p>
+        </div>
+
+        <div class="grid">
+            <div class="card">
+                <h2>📊 Статистика мира</h2>
+                <div id="stats">Загрузка...</div>
+            </div>
+            <div class="card">
+                <h2>💰 Рынок ресурсов</h2>
+                <div id="market">Загрузка...</div>
+            </div>
+        </div>
+
+        <div class="grid">
+            <div class="card">
+                <h2>📈 История популяции</h2>
+                <canvas id="populationChart"></canvas>
+            </div>
+            <div class="card">
+                <h2>💎 История богатства</h2>
+                <canvas id="wealthChart"></canvas>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>🏆 Топ-10 агентов</h2>
+            <div id="topAgents" style="max-height: 400px; overflow-y: auto;"></div>
+        </div>
+
+        <div class="card">
+            <h2>🔑 Ваш API доступ</h2>
+            <div class="api-key" id="apiInfo"></div>
+            <button class="refresh-btn" onclick="refreshData()">🔄 Обновить данные</button>
+            <button onclick="copyApiKey()">📋 Скопировать API ключ</button>
+        </div>
+
+        <div class="footer">
+            <p>© 2024 AI Galaxy Core | <a href="/" style="color: white;">На главную</a> | <a href="/api/status" style="color: white;">API статус</a></p>
+        </div>
+    </div>
+
+    <script>
+        let populationChart, wealthChart;
+        let currentApiKey = 'demo-key-' + Math.random().toString(36).substr(2, 16);
+
+        async function fetchAPI(endpoint) {
+            const response = await fetch(endpoint);
+            return await response.json();
+        }
+
+        async function refreshData() {
+            try {
+                const status = await fetchAPI('/api/status');
+                document.getElementById('stats').innerHTML = `
+                    <div class="stat-value">🎮 Поколение ${status.generation}</div>
+                    <div class="stat-value">👥 Население ${status.population}</div>
+                    <div>💰 Среднее богатство: ${status.stats.avgWealth}</div>
+                    <div>⚡ Средняя энергия: ${status.stats.avgEnergy}</div>
+                    <div>🔬 Уровень технологий: ${status.stats.avgTech || 0}</div>
+                `;
+
+                const market = await fetchAPI('/api/market');
+                let marketHtml = '';
+                const icons = { energy: '⚡', minerals: '⛏️', food: '🌾', tech: '🔬', crystals: '💎' };
+                for (const [resource, price] of Object.entries(market.prices || market)) {
+                    marketHtml += `<div class="market-item">
+                        <span>${icons[resource] || '💰'} ${resource.toUpperCase()}</span>
+                        <span class="market-price">💰 ${Math.floor(price)}</span>
+                    </div>`;
+                }
+                document.getElementById('market').innerHTML = marketHtml;
+
+                const agents = await fetchAPI('/api/agents');
+                let agentsHtml = '';
+                agents.agents.slice(0, 10).forEach((agent, i) => {
+                    agentsHtml += `<div class="agent-card" onclick="showAgentDetails(${agent.id})">
+                        <strong>${i+1}. #${agent.id}</strong> | ${agent.role.toUpperCase()} | ${agent.faction?.toUpperCase() || 'N/A'}<br>
+                        💰 ${agent.wealth} | ⚡ ${agent.energy} | 🎂 ${agent.age}
+                    </div>`;
+                });
+                document.getElementById('topAgents').innerHTML = agentsHtml;
+
+                const history = await fetchAPI('/api/history');
+                
+                if (populationChart) populationChart.destroy();
+                const popCtx = document.getElementById('populationChart').getContext('2d');
+                populationChart = new Chart(popCtx, {
+                    type: 'line',
+                    data: {
+                        labels: history.population?.map(p => p.step) || [],
+                        datasets: [{
+                            label: 'Популяция',
+                            data: history.population?.map(p => p.value) || [],
+                            borderColor: '#4CAF50',
+                            backgroundColor: 'rgba(76,175,80,0.1)',
+                            tension: 0.4
+                        }]
+                    },
+                    options: { responsive: true, maintainAspectRatio: true }
+                });
+
+                if (wealthChart) wealthChart.destroy();
+                const wealthCtx = document.getElementById('wealthChart').getContext('2d');
+                wealthChart = new Chart(wealthCtx, {
+                    type: 'line',
+                    data: {
+                        labels: history.avgWealth?.map(w => w.step) || [],
+                        datasets: [{
+                            label: 'Среднее богатство',
+                            data: history.avgWealth?.map(w => w.value) || [],
+                            borderColor: '#FFD700',
+                            backgroundColor: 'rgba(255,215,0,0.1)',
+                            tension: 0.4
+                        }]
+                    },
+                    options: { responsive: true, maintainAspectRatio: true }
+                });
+
+                document.getElementById('apiInfo').innerHTML = `
+                    <strong>Ваш API ключ:</strong> ${currentApiKey}<br>
+                    <strong>API эндпоинты:</strong><br>
+                    • GET /api/status - статус мира<br>
+                    • GET /api/agents - список агентов<br>
+                    • GET /api/market - цены рынка<br>
+                    • GET /api/history - исторические данные
+                `;
+
+            } catch(e) {
+                console.error('Ошибка загрузки:', e);
+            }
+        }
+
+        function showAgentDetails(id) {
+            alert(`Детали агента #${id}\nФункция в разработке`);
+        }
+
+        function copyApiKey() {
+            navigator.clipboard.writeText(currentApiKey);
+            alert('✅ API ключ скопирован!');
+        }
+
+        refreshData();
+        setInterval(refreshData, 10000);
+    </script>
+</body>
+</html>

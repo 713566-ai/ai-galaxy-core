@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Galaxy Core - 3D MMO</title>
+    <style>
+        body { margin: 0; overflow: hidden; font-family: 'Orbitron', monospace; }
+        #ui {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: rgba(0,0,0,0.8);
+            backdrop-filter: blur(10px);
+            color: #0f0;
+            padding: 15px 25px;
+            border-radius: 15px;
+            z-index: 100;
+            font-size: 14px;
+            border: 1px solid #0f0;
+        }
+        .stats-value { color: #ff0; font-weight: bold; font-size: 18px; }
+        #controls {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            background: rgba(0,0,0,0.6);
+            padding: 10px 15px;
+            border-radius: 10px;
+            z-index: 100;
+            font-size: 11px;
+            color: #aaa;
+        }
+        button { background: #0f0; color: #000; border: none; padding: 5px 10px; margin: 5px; cursor: pointer; border-radius: 5px; }
+    </style>
+</head>
+<body>
+    <div id="ui">
+        🚀 AI GALAXY CORE | <span id="status">🌐 CONNECTING...</span><br>
+        💰 БОГАТСТВО: <span id="wealth" class="stats-value">0</span><br>
+        👥 НАСЕЛЕНИЕ: <span id="population" class="stats-value">0</span><br>
+        🧬 ЭНТРОПИЯ: <span id="entropy" class="stats-value">0</span>%
+    </div>
+    <div id="controls">
+        🎮 МЫШЬ/ПАЛЕЦ - вращать | ЗУМ - приблизить
+    </div>
+
+    <script type="importmap">
+        { "imports": { "three": "https://unpkg.com/three@0.128.0/build/three.module.js", "three/addons/": "https://unpkg.com/three@0.128.0/examples/jsm/" } }
+    </script>
+
+    <script type="module">
+        import * as THREE from 'three';
+        import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+        import { CSS2DRenderer, CSS2DObject } from 'three/addons/renderers/CSS2DRenderer.js';
+        
+        const scene = new THREE.Scene();
+        scene.background = new THREE.Color(0x050510);
+        
+        const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 1000);
+        camera.position.set(5, 3, 12);
+        
+        const renderer = new THREE.WebGLRenderer({ antialias: true });
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        document.body.appendChild(renderer.domElement);
+        
+        const labelRenderer = new CSS2DRenderer();
+        labelRenderer.setSize(window.innerWidth, window.innerHeight);
+        labelRenderer.domElement.style.position = 'absolute';
+        labelRenderer.domElement.style.top = '0px';
+        labelRenderer.domElement.style.left = '0px';
+        labelRenderer.domElement.style.pointerEvents = 'none';
+        document.body.appendChild(labelRenderer.domElement);
+        
+        const controls = new OrbitControls(camera, renderer.domElement);
+        controls.enableDamping = true;
+        controls.autoRotate = false;
+        controls.enableZoom = true;
+        
+        // Планета
+        const geometry = new THREE.SphereGeometry(2.5, 128, 128);
+        const material = new THREE.MeshStandardMaterial({ color: 0x44aa88, metalness: 0.3, roughness: 0.5, emissive: 0x114422 });
+        const planet = new THREE.Mesh(geometry, material);
+        scene.add(planet);
+        
+        // Атмосфера
+        const atmGeo = new THREE.SphereGeometry(2.55, 128, 128);
+        const atmMat = new THREE.MeshPhongMaterial({ color: 0x44aaff, transparent: true, opacity: 0.12 });
+        const atmosphere = new THREE.Mesh(atmGeo, atmMat);
+        planet.add(atmosphere);
+        
+        // Название
+        const div = document.createElement('div');
+        div.textContent = '🌍 ЗЕМЛЯ';
+        div.style.color = '#0f0';
+        div.style.fontSize = '20px';
+        div.style.background = 'rgba(0,0,0,0.6)';
+        div.style.padding = '5px 15px';
+        div.style.borderRadius = '30px';
+        div.style.border = '1px solid #0f0';
+        const label = new CSS2DObject(div);
+        label.position.set(0, 3.2, 0);
+        planet.add(label);
+        
+        // Звёзды
+        const starsGeo = new THREE.BufferGeometry();
+        const starsCount = 2000;
+        const starsPos = new Float32Array(starsCount * 3);
+        for (let i = 0; i < starsCount; i++) {
+            starsPos[i*3] = (Math.random() - 0.5) * 400;
+            starsPos[i*3+1] = (Math.random() - 0.5) * 200;
+            starsPos[i*3+2] = (Math.random() - 0.5) * 150 - 80;
+        }
+        starsGeo.setAttribute('position', new THREE.BufferAttribute(starsPos, 3));
+        const stars = new THREE.Points(starsGeo, new THREE.PointsMaterial({ color: 0xffffff, size: 0.15 }));
+        scene.add(stars);
+        
+        // Свет
+        const ambientLight = new THREE.AmbientLight(0x222222);
+        scene.add(ambientLight);
+        const dirLight = new THREE.DirectionalLight(0xffffff, 1.2);
+        dirLight.position.set(8, 12, 5);
+        scene.add(dirLight);
+        
+        function animate() {
+            requestAnimationFrame(animate);
+            planet.rotation.y += 0.002;
+            stars.rotation.y += 0.0003;
+            controls.update();
+            renderer.render(scene, camera);
+            labelRenderer.render(scene, camera);
+        }
+        animate();
+        
+        async function fetchData() {
+            try {
+                const res = await fetch('/api/dashboard');
+                const data = await res.json();
+                document.getElementById('wealth').innerHTML = data.gameState?.wealth || 0;
+                document.getElementById('population').innerHTML = data.gameState?.population || 0;
+                document.getElementById('status').innerHTML = '✅ CONNECTED';
+            } catch(e) {
+                document.getElementById('status').innerHTML = '⚠️ NO SERVER';
+            }
+            try {
+                const res = await fetch('/api/god/universe');
+                const data = await res.json();
+                document.getElementById('entropy').innerHTML = data.entropy ? (data.entropy * 100).toFixed(1) : '0';
+            } catch(e) {}
+        }
+        fetchData();
+        setInterval(fetchData, 3000);
+        
+        window.addEventListener('resize', () => {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            labelRenderer.setSize(window.innerWidth, window.innerHeight);
+        });
+    </script>
+</body>
+</html>

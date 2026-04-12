@@ -1,0 +1,8 @@
+{
+    "name": "Freelancer Starter Pack",
+    "version": "1.0.0",
+    "author": "AI Galaxy Team",
+    "description": "Добавляет стартовый корабль, базовые миссии и торговые маршруты как в Freelancer",
+    "freelancer-style": true,
+    "requires": []
+}

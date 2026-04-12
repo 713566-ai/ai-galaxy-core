@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Оплата - AI Galaxy Core</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: white;
+            padding: 20px;
+        }
+        .container { max-width: 600px; margin: 0 auto; }
+        .card {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 20px;
+        }
+        .card h2 {
+            margin-bottom: 20px;
+            border-left: 3px solid #4CAF50;
+            padding-left: 15px;
+        }
+        select, input {
+            width: 100%;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 10px;
+            border: none;
+            background: rgba(255,255,255,0.2);
+            color: white;
+            font-size: 1em;
+        }
+        button {
+            width: 100%;
+            padding: 15px;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.1em;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        .wallet {
+            background: rgba(0,0,0,0.5);
+            padding: 15px;
+            border-radius: 10px;
+            font-family: monospace;
+            word-break: break-all;
+            margin: 15px 0;
+        }
+        .copy-btn {
+            background: #2196F3;
+            margin-top: 10px;
+        }
+        .total {
+            font-size: 1.5em;
+            text-align: center;
+            margin: 20px 0;
+            color: #FFD700;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>💰 Оплата подписки</h1>
+
+        <div class="card">
+            <h2>📋 Выберите тариф</h2>
+            <select id="plan">
+                <option value="basic">Basic - $29/мес (100 агентов)</option>
+                <option value="pro">Pro - $99/мес (500 агентов)</option>
+                <option value="enterprise">Enterprise - $299/мес (безлимит)</option>
+            </select>
+        </div>
+
+        <div class="card" id="paymentMethods" style="display:none;">
+            <h2>💳 Способ оплаты</h2>
+            <select id="method">
+                <option value="card">💳 Банковская карта (UAH)</option>
+                <option value="usdt">💎 USDT (TRC20)</option>
+                <option value="btc">₿ Bitcoin</option>
+                <option value="eth">🔷 Ethereum</option>
+                <option value="ton">📱 TON (Telegram)</option>
+                <option value="swift">🏦 SWIFT (Доллары)</option>
+            </select>
+        </div>
+
+        <div class="card" id="contactForm" style="display:none;">
+            <h2>📧 Контактные данные</h2>
+            <input type="email" id="email" placeholder="Ваш Email" required>
+            <input type="text" id="telegram" placeholder="Telegram (для поддержки)">
+            <button onclick="generatePayment()">💰 Перейти к оплате</button>
+        </div>
+
+        <div class="card" id="paymentInfo" style="display:none;">
+            <h2>📋 Реквизиты для оплаты</h2>
+            <div id="instructions"></div>
+            <div id="walletAddress" class="wallet"></div>
+            <button class="copy-btn" onclick="copyInstructions()">📋 Скопировать реквизиты</button>
+            <button onclick="confirmPayment()">✅ Я оплатил(а)</button>
+        </div>
+
+        <div class="card">
+            <h2>🏦 Наши реквизиты</h2>
+            <p><strong>💳 Карта (UAH):</strong><br>4441 1110 8473 8792</p>
+            <p><strong>💎 USDT (TRC20):</strong><br>TEK5PUb2fzyr7V3gHHVDChBaLaJfTy6P8h</p>
+            <p><strong>₿ Bitcoin:</strong><br>15JqhF9EvgTezhJRpz1uB1BPo8eARudH5G</p>
+            <p><strong>🔷 Ethereum:</strong><br>0xf3ae67498bb2c15974be610fba3e16746f53de10</p>
+            <p><strong>📱 TON:</strong><br>UQBwWL-KEqr2sz3gsSGvRolJ37m9-P6wxVuq5Eaf2--ENzOB</p>
+            <p><strong>🏦 SWIFT (USD):</strong><br>IBAN: UA133220010000026205316571982<br>SWIFT: UNJSUAUKXXX<br>Получатель: KADUKOV HLIB</p>
+            <p><strong>📞 Поддержка:</strong><br>Телефон: +380987979381</p>
+        </div>
+    </div>
+
+    <script>
+        let currentPayment = {};
+
+        document.getElementById('plan').addEventListener('change', () => {
+            document.getElementById('paymentMethods').style.display = 'block';
+        });
+
+        document.getElementById('method').addEventListener('change', () => {
+            document.getElementById('contactForm').style.display = 'block';
+        });
+
+        function generatePayment() {
+            const plan = document.getElementById('plan').value;
+            const method = document.getElementById('method').value;
+            const email = document.getElementById('email').value;
+            const telegram = document.getElementById('telegram').value;
+
+            if (!email) {
+                alert('Введите Email');
+                return;
+            }
+
+            currentPayment = { plan, method, email, telegram };
+
+            const instructions = {
+                card: `💳 Переведите на карту:\nНомер: 4441 1110 8473 8792\nСумма: ${getPriceUAH(plan)} грн\nВ комментарии укажите ваш Email: ${email}\n\nПосле оплаты нажмите "Я оплатил(а)"`,
+                usdt: `💎 Переведите USDT (TRC20):\nАдрес: TEK5PUb2fzyr7V3gHHVDChBaLaJfTy6P8h\nСумма: $${getPriceUSD(plan)} USDT\n\nПосле оплаты нажмите "Я оплатил(а)"`,
+                btc: `₿ Переведите Bitcoin:\nАдрес: 15JqhF9EvgTezhJRpz1uB1BPo8eARudH5G\nСумма: ${(getPriceUSD(plan) / 50000).toFixed(6)} BTC\n\nПосле оплаты нажмите "Я оплатил(а)"`,
+                eth: `🔷 Переведите Ethereum:\nАдрес: 0xf3ae67498bb2c15974be610fba3e16746f53de10\nСумма: ${(getPriceUSD(plan) / 2000).toFixed(4)} ETH\n\nПосле оплаты нажмите "Я оплатил(а)"`,
+                ton: `📱 Переведите TON:\nАдрес: UQBwWL-KEqr2sz3gsSGvRolJ37m9-P6wxVuq5Eaf2--ENzOB\nСумма: ${(getPriceUSD(plan) / 5).toFixed(2)} TON\n\nПосле оплаты нажмите "Я оплатил(а)"`,
+                swift: `🏦 SWIFT перевод:\nIBAN: UA133220010000026205316571982\nSWIFT: UNJSUAUKXXX\nПолучатель: KADUKOV HLIB\nСумма: $${getPriceUSD(plan)}\nНазначение: Подписка ${plan}\n\nПосле оплаты нажмите "Я оплатил(а)"`
+            };
+
+            document.getElementById('instructions').innerHTML = `<pre style="white-space: pre-wrap;">${instructions[method]}</pre>`;
+            document.getElementById('paymentInfo').style.display = 'block';
+            document.getElementById('contactForm').style.display = 'none';
+        }
+
+        function getPriceUSD(plan) {
+            const prices = { basic: 29, pro: 99, enterprise: 299 };
+            return prices[plan];
+        }
+
+        function getPriceUAH(plan) {
+            const prices = { basic: 1200, pro: 4000, enterprise: 12000 };
+            return prices[plan];
+        }
+
+        function copyInstructions() {
+            const text = document.getElementById('instructions').innerText;
+            navigator.clipboard.writeText(text);
+            alert('✅ Реквизиты скопированы!');
+        }
+
+        async function confirmPayment() {
+            const response = await fetch('/api/confirm-payment', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(currentPayment)
+            });
+            const data = await response.json();
+            if (data.success) {
+                alert(`✅ Подписка активирована!\n\nВаш API ключ: ${data.apiKey}\n\nСохраните его!`);
+                window.location.href = '/dashboard';
+            } else {
+                alert('❌ Ошибка. Свяжитесь с поддержкой: +380987979381');
+            }
+        }
+    </script>
+</body>
+</html>

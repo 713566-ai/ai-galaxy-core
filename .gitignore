@@ -1,0 +1,8 @@
+node_modules/
+*.log
+save_*.json
+connection-history.json
+backups/
+.DS_Store
+*.zip
+.env

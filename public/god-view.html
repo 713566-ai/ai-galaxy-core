@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>GOD CORE Viewer</title>
+    <style>
+        body { background: #0a0a2a; color: #0f0; font-family: monospace; padding: 20px; }
+        button { background: #0f0; color: #000; padding: 10px; margin: 5px; cursor: pointer; }
+        .card { border: 1px solid #0f0; padding: 15px; margin: 10px 0; border-radius: 10px; }
+    </style>
+</head>
+<body>
+    <h1>🌌 GOD CORE - Вселенная</h1>
+    <div id="data" class="card">Загрузка...</div>
+    <div>
+        <button onclick="action('expand')">🪐 EXPAND</button>
+        <button onclick="action('research')">🔬 RESEARCH</button>
+        <button onclick="action('stabilize')">🕊️ STABILIZE</button>
+    </div>
+    <script>
+        async function load() {
+            const r = await fetch('/api/god/universe');
+            const d = await r.json();
+            document.getElementById('data').innerHTML = `
+                <p>📊 Энтропия: ${(d.entropy * 100).toFixed(1)}%</p>
+                <p>👥 Сущностей: ${d.entities}</p>
+                <p>🏛️ Цивилизаций: ${d.civs}</p>
+                <p>🔬 Технологии: ${d.tech}%</p>
+            `;
+        }
+        async function action(a) {
+            await fetch(`/api/god/action/${a}`, { method: 'POST' });
+            load();
+        }
+        load();
+        setInterval(load, 3000);
+    </script>
+</body>
+</html>

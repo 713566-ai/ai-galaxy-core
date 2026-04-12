@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">AI Galaxy Core</string>
+    <string name="title_activity_main">AI Galaxy Core</string>
+    <string name="package_name">com.aigalaxy.game</string>
+    <string name="custom_url_scheme">com.aigalaxy.game</string>
+</resources>
