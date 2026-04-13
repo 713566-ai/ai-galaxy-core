@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+
 // ============================================================
 // 🌍🧬 AI GALAXY CORE V145 — GAME CIVILIZATION LAYER
 // ============================================================
@@ -299,3 +299,291 @@ app.post("/api/git/sync", async (req, res) => {
 });
 
 console.log("🔄 [GIT] Auto-Git Manager integrated (commits every minute)");
+
+
+// ============================
+// 🧠 V154 GAME CONSCIOUSNESS LAYER
+// ============================
+function consciousness(game) {
+  const fitness = Number(game.fitness || 0);
+  const fun = Number(game.fun || 0);
+  const money = Number(game.money || 0);
+
+  // базовое "сознание"
+  const awareness = (fun * 0.5 + money * 0.3 + fitness * 0.2);
+
+  // сопротивление смерти
+  const willToLive = Math.max(0, Math.tanh(awareness / 50));
+
+  return {
+    awareness,
+    willToLive
+  };
+}
+
+// override evolution hook
+if (typeof global !== 'undefined') {
+  global.V154_CONSCIOUSNESS = true;
+}
+
+
+// ============================
+// 🧬 V155 MEMORY GENOME LAYER
+// ============================
+
+// глобальная память эволюции
+if (!global._genomeMemory) {
+  global._genomeMemory = new Map();
+}
+
+// сохраняем опыт игры
+function storeGenome(game) {
+  const id = game.id;
+
+  if (!global._genomeMemory.has(id)) {
+    global._genomeMemory.set(id, []);
+  }
+
+  const memory = global._genomeMemory.get(id);
+
+  memory.push({
+    fun: Number(game.fun || 0),
+    money: Number(game.money || 0),
+    fitness: Number(game.fitness || 0),
+    tick: Date.now()
+  });
+
+  // ограничиваем память
+  if (memory.length > 20) memory.shift();
+
+  return memory;
+}
+
+// извлекаем "генетическую память"
+function readGenome(game) {
+  const memory = global._genomeMemory.get(game.id) || [];
+
+  if (memory.length === 0) {
+    return { stability: 0, adaptation: 0 };
+  }
+
+  let avgFun = 0;
+  let avgFitness = 0;
+
+  for (const m of memory) {
+    avgFun += m.fun;
+    avgFitness += m.fitness;
+  }
+
+  avgFun /= memory.length;
+  avgFitness /= memory.length;
+
+  const stability = Math.tanh(avgFitness / 50);
+  const adaptation = Math.tanh(avgFun / 50);
+
+  return {
+    stability,
+    adaptation,
+    memorySize: memory.length
+  };
+}
+
+// подключаем в глобальный флаг
+if (typeof global !== 'undefined') {
+  global.V155_MEMORY_GENOME = true;
+}
+
+
+// ============================
+// 🧬 V156 PREDATOR–PREY LAYER
+// ============================
+
+if (!global._ecosystem) {
+  global._ecosystem = {
+    predators: new Set(),
+    prey: new Set()
+  };
+}
+
+// назначаем роль игре
+function assignRole(game) {
+  const score = Number(game.fitness || game.fun || 0);
+
+  if (score > 30) {
+    global._ecosystem.predators.add(game.id);
+    return "predator";
+  } else {
+    global._ecosystem.prey.add(game.id);
+    return "prey";
+  }
+}
+
+// охота хищника
+function hunt(predator, preyGame) {
+  const gain = Number(preyGame.money || 0) * 0.4;
+
+  predator.money = (Number(predator.money || 0) + gain);
+  preyGame.money = Math.max(0, Number(preyGame.money || 0) - gain);
+
+  // если ресурсы упали → смерть
+  if (preyGame.money <= 0) {
+    preyGame.dead = true;
+  }
+
+  return { gain };
+}
+
+// эволюционное давление
+function applyPredation(games) {
+  const predators = games.filter(g => global._ecosystem.predators.has(g.id));
+  const prey = games.filter(g => global._ecosystem.prey.has(g.id));
+
+  for (const p of predators) {
+    const target = prey[Math.floor(Math.random() * prey.length)];
+    if (target && !target.dead) {
+      hunt(p, target);
+    }
+  }
+}
+
+// hook в глобал
+if (typeof global !== 'undefined') {
+  global.V156_PREDATOR_PREY = true;
+}
+
+
+
+// ============================
+// 🧠 V157 COLLECTIVE BRAIN LAYER
+// ============================
+
+if (!global._collectiveBrain) {
+  global._collectiveBrain = {
+    sharedMemory: [],
+    knowledge: new Map()
+  };
+}
+
+// запись опыта в общий мозг
+function shareExperience(game) {
+  global._collectiveBrain.sharedMemory.push({
+    id: game.id,
+    fun: Number(game.fun || 0),
+    fitness: Number(game.fitness || 0),
+    money: Number(game.money || 0),
+    t: Date.now()
+  });
+
+  if (global._collectiveBrain.sharedMemory.length > 100) {
+    global._collectiveBrain.sharedMemory.shift();
+  }
+}
+
+// извлечение коллективного опыта
+function getCollectiveWisdom() {
+  const mem = global._collectiveBrain.sharedMemory;
+
+  if (mem.length === 0) return { avgFitness: 0, avgFun: 0 };
+
+  let f = 0, u = 0;
+
+  for (const m of mem) {
+    f += m.fitness;
+    u += m.fun;
+  }
+
+  return {
+    avgFitness: f / mem.length,
+    avgFun: u / mem.length,
+    size: mem.length
+  };
+}
+
+// влияние коллективного мозга на игру
+function applyCollectiveBrain(game) {
+  const wisdom = getCollectiveWisdom();
+
+  const boost = (wisdom.avgFitness * 0.3 + wisdom.avgFun * 0.2);
+
+  game.fitness = Number(game.fitness || 0) + boost * 0.01;
+  game.fun = Number(game.fun || 0) + boost * 0.005;
+
+  return game;
+}
+
+// hook
+if (typeof global !== 'undefined') {
+  global.V157_COLLECTIVE_BRAIN = true;
+}
+
+
+
+// ============================
+// 🌌 V158 WORLD PHYSICS ENGINE
+// ============================
+
+if (!global._worldPhysics) {
+  global._worldPhysics = {
+    energy: 1000,
+    entropy: 0.5,
+    tick: 0
+  };
+}
+
+// обновление физики мира
+function updateWorldPhysics(games) {
+  const world = global._worldPhysics;
+
+  world.tick++;
+
+  // суммарная активность игр
+  let totalEnergyUse = 0;
+  let alive = 0;
+
+  for (const g of games) {
+    if (!g.dead) {
+      alive++;
+      totalEnergyUse += Number(g.money || 0) * 0.01;
+    }
+  }
+
+  // закон сохранения энергии
+  world.energy -= totalEnergyUse * 0.05;
+
+  // восстановление энергии мира
+  world.energy += Math.sin(world.tick * 0.01) * 2;
+
+  // энтропия растёт при хаосе
+  world.entropy = Math.min(
+    1,
+    world.entropy + (alive < 10 ? 0.01 : -0.005)
+  );
+
+  // стабилизация
+  if (world.energy < 0) world.energy = 0;
+  if (world.energy > 2000) world.energy = 2000;
+
+  return world;
+}
+
+// влияние мира на игры
+function applyWorldPhysics(game) {
+  const world = global._worldPhysics;
+
+  const energyFactor = world.energy / 1000;
+  const entropyFactor = 1 - world.entropy;
+
+  game.fitness =
+    Number(game.fitness || 0) * energyFactor * entropyFactor;
+
+  game.fun =
+    Number(game.fun || 0) * (0.8 + energyFactor * 0.2);
+
+  return game;
+}
+
+// hook
+if (typeof global !== 'undefined') {
+  global.V158_WORLD_PHYSICS = true;
+}
+
