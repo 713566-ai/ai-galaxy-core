@@ -1,0 +1,1350 @@
+{
+  "tick": 160,
+  "world": {
+    "entropy": 0.3960797525888489,
+    "entities": 508,
+    "wars": 28,
+    "alliances": 0
+  },
+  "reward": {
+    "total": -19.68708420114667,
+    "last": -0.28778862408564243,
+    "smoothed": -0.28835789395436,
+    "history": [
+      {
+        "tick": 1,
+        "reward": 0.0010149128410220642
+      },
+      {
+        "tick": 2,
+        "reward": -0.014934720323125095
+      },
+      {
+        "tick": 3,
+        "reward": -0.027912297501135053
+      },
+      {
+        "tick": 4,
+        "reward": -0.031084962394334115
+      },
+      {
+        "tick": 5,
+        "reward": -0.040665266267939426
+      },
+      {
+        "tick": 6,
+        "reward": -0.04049649089992008
+      },
+      {
+        "tick": 7,
+        "reward": -0.04022746877632449
+      },
+      {
+        "tick": 8,
+        "reward": -0.04236540988739862
+      },
+      {
+        "tick": 9,
+        "reward": -0.0426228010099578
+      },
+      {
+        "tick": 10,
+        "reward": -0.0484175068048156
+      },
+      {
+        "tick": 11,
+        "reward": -0.04906017138428159
+      },
+      {
+        "tick": 12,
+        "reward": -0.05579159534885525
+      },
+      {
+        "tick": 13,
+        "reward": -0.056617452709109006
+      },
+      {
+        "tick": 14,
+        "reward": -0.0700838790007478
+      },
+      {
+        "tick": 15,
+        "reward": -0.07584461895846983
+      },
+      {
+        "tick": 16,
+        "reward": -0.06906217536772985
+      },
+      {
+        "tick": 17,
+        "reward": -0.07379885988026896
+      },
+      {
+        "tick": 18,
+        "reward": -0.07818603662494378
+      },
+      {
+        "tick": 19,
+        "reward": -0.08595792932213264
+      },
+      {
+        "tick": 20,
+        "reward": -0.08644155316024688
+      },
+      {
+        "tick": 21,
+        "reward": -0.09597165139734781
+      },
+      {
+        "tick": 22,
+        "reward": -0.1028009239115974
+      },
+      {
+        "tick": 23,
+        "reward": -0.09414057127728187
+      },
+      {
+        "tick": 24,
+        "reward": -0.08996874465413995
+      },
+      {
+        "tick": 25,
+        "reward": -0.08960373065993793
+      },
+      {
+        "tick": 26,
+        "reward": -0.0951909020445087
+      },
+      {
+        "tick": 27,
+        "reward": -0.08323810851468538
+      },
+      {
+        "tick": 28,
+        "reward": -0.08810161379393033
+      },
+      {
+        "tick": 29,
+        "reward": -0.0839235105624454
+      },
+      {
+        "tick": 30,
+        "reward": -0.08377875933480228
+      },
+      {
+        "tick": 31,
+        "reward": -0.08470919978307023
+      },
+      {
+        "tick": 32,
+        "reward": -0.08436846150382388
+      },
+      {
+        "tick": 33,
+        "reward": -0.08128117395720907
+      },
+      {
+        "tick": 34,
+        "reward": -0.0702905904039815
+      },
+      {
+        "tick": 35,
+        "reward": -0.06778848805965348
+      },
+      {
+        "tick": 36,
+        "reward": -0.04880981428970482
+      },
+      {
+        "tick": 37,
+        "reward": -0.048414840295604666
+      },
+      {
+        "tick": 38,
+        "reward": -0.042204972269346996
+      },
+      {
+        "tick": 39,
+        "reward": -0.05483471321495409
+      },
+      {
+        "tick": 40,
+        "reward": -0.041058097856547626
+      },
+      {
+        "tick": 41,
+        "reward": -0.04285455440428865
+      },
+      {
+        "tick": 42,
+        "reward": -0.053312944452718725
+      },
+      {
+        "tick": 43,
+        "reward": -0.036458676238642906
+      },
+      {
+        "tick": 44,
+        "reward": -0.023824628381146018
+      },
+      {
+        "tick": 45,
+        "reward": 0.00010492062925582246
+      },
+      {
+        "tick": 46,
+        "reward": -0.004370266027539926
+      },
+      {
+        "tick": 47,
+        "reward": -0.004273042057345133
+      },
+      {
+        "tick": 48,
+        "reward": -0.013689576154035599
+      },
+      {
+        "tick": 49,
+        "reward": -0.0213438137750126
+      },
+      {
+        "tick": 50,
+        "reward": -0.026441404503847188
+      },
+      {
+        "tick": 51,
+        "reward": -0.028206570287057697
+      },
+      {
+        "tick": 52,
+        "reward": -0.013308708999915098
+      },
+      {
+        "tick": 53,
+        "reward": -0.012510977835567594
+      },
+      {
+        "tick": 54,
+        "reward": -0.016153513988970802
+      },
+      {
+        "tick": 55,
+        "reward": -0.0028378231413130894
+      },
+      {
+        "tick": 56,
+        "reward": -0.011312040900876674
+      },
+      {
+        "tick": 57,
+        "reward": -0.007232516006479728
+      },
+      {
+        "tick": 58,
+        "reward": -0.009217555630422147
+      },
+      {
+        "tick": 59,
+        "reward": -0.01622706513317801
+      },
+      {
+        "tick": 60,
+        "reward": -0.0019106132262470266
+      },
+      {
+        "tick": 61,
+        "reward": -0.009212107041697781
+      },
+      {
+        "tick": 62,
+        "reward": -0.0036688425139664305
+      },
+      {
+        "tick": 63,
+        "reward": -0.0026501900682648905
+      },
+      {
+        "tick": 64,
+        "reward": 0.003087122907589168
+      },
+      {
+        "tick": 65,
+        "reward": 0.001595122018870243
+      },
+      {
+        "tick": 66,
+        "reward": 0.00014909727492307123
+      },
+      {
+        "tick": 67,
+        "reward": -0.004643746597336962
+      },
+      {
+        "tick": 68,
+        "reward": -0.008450975492936497
+      },
+      {
+        "tick": 69,
+        "reward": -0.002937592935238653
+      },
+      {
+        "tick": 70,
+        "reward": -0.0069862761772355175
+      },
+      {
+        "tick": 71,
+        "reward": -0.016731419713965412
+      },
+      {
+        "tick": 72,
+        "reward": 0.010115959973344357
+      },
+      {
+        "tick": 73,
+        "reward": 0.0009298631519486511
+      },
+      {
+        "tick": 74,
+        "reward": -0.016872947758532764
+      },
+      {
+        "tick": 75,
+        "reward": -0.01708173046550826
+      },
+      {
+        "tick": 76,
+        "reward": -0.01826681023754434
+      },
+      {
+        "tick": 77,
+        "reward": -0.020276151298269263
+      },
+      {
+        "tick": 78,
+        "reward": -0.02423829279951706
+      },
+      {
+        "tick": 79,
+        "reward": -0.03717428151037899
+      },
+      {
+        "tick": 80,
+        "reward": -0.03804903922508113
+      },
+      {
+        "tick": 81,
+        "reward": -0.03926485826398185
+      },
+      {
+        "tick": 82,
+        "reward": -0.053085697595126824
+      },
+      {
+        "tick": 83,
+        "reward": -0.05513593702571856
+      },
+      {
+        "tick": 84,
+        "reward": -0.05969965690487272
+      },
+      {
+        "tick": 85,
+        "reward": -0.0564692554912572
+      },
+      {
+        "tick": 86,
+        "reward": -0.05921770650249575
+      },
+      {
+        "tick": 87,
+        "reward": -0.06697342474067808
+      },
+      {
+        "tick": 88,
+        "reward": -0.07184656217666435
+      },
+      {
+        "tick": 89,
+        "reward": -0.07581763796731922
+      },
+      {
+        "tick": 90,
+        "reward": -0.081603321494367
+      },
+      {
+        "tick": 91,
+        "reward": -0.08487492391363277
+      },
+      {
+        "tick": 92,
+        "reward": -0.08701505751343142
+      },
+      {
+        "tick": 93,
+        "reward": -0.10126482856253222
+      },
+      {
+        "tick": 94,
+        "reward": -0.10268932283802595
+      },
+      {
+        "tick": 95,
+        "reward": -0.11038468798020201
+      },
+      {
+        "tick": 96,
+        "reward": -0.1153310010587934
+      },
+      {
+        "tick": 97,
+        "reward": -0.12441041473642084
+      },
+      {
+        "tick": 98,
+        "reward": -0.13514777895771113
+      },
+      {
+        "tick": 99,
+        "reward": -0.1412287212893592
+      },
+      {
+        "tick": 100,
+        "reward": -0.14771760602880607
+      },
+      {
+        "tick": 101,
+        "reward": -0.1509114547558299
+      },
+      {
+        "tick": 102,
+        "reward": -0.15634247593804584
+      },
+      {
+        "tick": 103,
+        "reward": -0.15995920032532734
+      },
+      {
+        "tick": 104,
+        "reward": -0.15642215936390907
+      },
+      {
+        "tick": 105,
+        "reward": -0.1610457992353545
+      },
+      {
+        "tick": 106,
+        "reward": -0.16106928943818616
+      },
+      {
+        "tick": 107,
+        "reward": -0.1660476901149046
+      },
+      {
+        "tick": 108,
+        "reward": -0.17649814622634696
+      },
+      {
+        "tick": 109,
+        "reward": -0.17699987291320357
+      },
+      {
+        "tick": 110,
+        "reward": -0.18310611577793479
+      },
+      {
+        "tick": 111,
+        "reward": -0.18432371868434705
+      },
+      {
+        "tick": 112,
+        "reward": -0.18798213492844001
+      },
+      {
+        "tick": 113,
+        "reward": -0.18952138869903884
+      },
+      {
+        "tick": 114,
+        "reward": -0.1853299573666693
+      },
+      {
+        "tick": 115,
+        "reward": -0.18739924326463986
+      },
+      {
+        "tick": 116,
+        "reward": -0.18868281615712906
+      },
+      {
+        "tick": 117,
+        "reward": -0.19477889354024686
+      },
+      {
+        "tick": 118,
+        "reward": -0.20005312724709162
+      },
+      {
+        "tick": 119,
+        "reward": -0.20341730308290884
+      },
+      {
+        "tick": 120,
+        "reward": -0.20693187809063995
+      },
+      {
+        "tick": 121,
+        "reward": -0.20817242172232886
+      },
+      {
+        "tick": 122,
+        "reward": -0.2217326941731379
+      },
+      {
+        "tick": 123,
+        "reward": -0.22694773350320202
+      },
+      {
+        "tick": 124,
+        "reward": -0.22611298763713183
+      },
+      {
+        "tick": 125,
+        "reward": -0.23326795786864796
+      },
+      {
+        "tick": 126,
+        "reward": -0.24463658372161295
+      },
+      {
+        "tick": 127,
+        "reward": -0.2532322010307855
+      },
+      {
+        "tick": 128,
+        "reward": -0.26130383952614844
+      },
+      {
+        "tick": 129,
+        "reward": -0.27030592812382437
+      },
+      {
+        "tick": 130,
+        "reward": -0.2732673487995161
+      },
+      {
+        "tick": 131,
+        "reward": -0.2718625226625403
+      },
+      {
+        "tick": 132,
+        "reward": -0.26991035965208143
+      },
+      {
+        "tick": 133,
+        "reward": -0.2737499273528561
+      },
+      {
+        "tick": 134,
+        "reward": -0.271010013190384
+      },
+      {
+        "tick": 135,
+        "reward": -0.2787174343014698
+      },
+      {
+        "tick": 136,
+        "reward": -0.2872857965497706
+      },
+      {
+        "tick": 137,
+        "reward": -0.2956193550869347
+      },
+      {
+        "tick": 138,
+        "reward": -0.29813401064419554
+      },
+      {
+        "tick": 139,
+        "reward": -0.29965554034306463
+      },
+      {
+        "tick": 140,
+        "reward": -0.2994014914811173
+      },
+      {
+        "tick": 141,
+        "reward": -0.3054763149711742
+      },
+      {
+        "tick": 142,
+        "reward": -0.3027147623004275
+      },
+      {
+        "tick": 143,
+        "reward": -0.2981711318526933
+      },
+      {
+        "tick": 144,
+        "reward": -0.2969388132946955
+      },
+      {
+        "tick": 145,
+        "reward": -0.29864712017751394
+      },
+      {
+        "tick": 146,
+        "reward": -0.30279351161627244
+      },
+      {
+        "tick": 147,
+        "reward": -0.2993253185261232
+      },
+      {
+        "tick": 148,
+        "reward": -0.30253198971521156
+      },
+      {
+        "tick": 149,
+        "reward": -0.30223458227254707
+      },
+      {
+        "tick": 150,
+        "reward": -0.30625264139007924
+      },
+      {
+        "tick": 151,
+        "reward": -0.29941327045886035
+      },
+      {
+        "tick": 152,
+        "reward": -0.29245924656251654
+      },
+      {
+        "tick": 153,
+        "reward": -0.29448761696519676
+      },
+      {
+        "tick": 154,
+        "reward": -0.2990401681411623
+      },
+      {
+        "tick": 155,
+        "reward": -0.3006901519448478
+      },
+      {
+        "tick": 156,
+        "reward": -0.3016371066225676
+      },
+      {
+        "tick": 157,
+        "reward": -0.29323981243253205
+      },
+      {
+        "tick": 158,
+        "reward": -0.2910419252294304
+      },
+      {
+        "tick": 159,
+        "reward": -0.28609311943540583
+      },
+      {
+        "tick": 160,
+        "reward": -0.28778862408564243
+      }
+    ]
+  },
+  "agents": [
+    {
+      "name": "codey",
+      "fitness": 0.13595846182387297,
+      "personality": {
+        "aggression": 0.95,
+        "curiosity": 0.6334539771453851,
+        "risk": 0.9,
+        "stability": 0.2
+      },
+      "consciousness": {
+        "trauma": 0.9,
+        "aggressionBias": 0.8,
+        "trustDecay": 0.4500000000000002,
+        "warMemories": [
+          {
+            "tick": 14,
+            "outcome": "loss",
+            "intensity": 0.7534885778661059
+          },
+          {
+            "tick": 16,
+            "outcome": "loss",
+            "intensity": 0.7539829551653561
+          },
+          {
+            "tick": 20,
+            "outcome": "loss",
+            "intensity": 0.7549667332698765
+          },
+          {
+            "tick": 23,
+            "outcome": "loss",
+            "intensity": 0.8556994380883797
+          },
+          {
+            "tick": 27,
+            "outcome": "loss",
+            "intensity": 0.8566682859172208
+          },
+          {
+            "tick": 34,
+            "outcome": "loss",
+            "intensity": 0.8583371773035203
+          },
+          {
+            "tick": 36,
+            "outcome": "loss",
+            "intensity": 0.8588068558318772
+          },
+          {
+            "tick": 37,
+            "outcome": "win",
+            "intensity": 0.859040385799124
+          },
+          {
+            "tick": 38,
+            "outcome": "loss",
+            "intensity": 0.8592730117353246
+          },
+          {
+            "tick": 43,
+            "outcome": "loss",
+            "intensity": 0.8604217700607302
+          },
+          {
+            "tick": 45,
+            "outcome": "loss",
+            "intensity": 0.8608741383527807
+          },
+          {
+            "tick": 51,
+            "outcome": "win",
+            "intensity": 0.8622044311720727
+          },
+          {
+            "tick": 53,
+            "outcome": "win",
+            "intensity": 0.8626383335301211
+          },
+          {
+            "tick": 55,
+            "outcome": "loss",
+            "intensity": 0.8630671807232664
+          },
+          {
+            "tick": 60,
+            "outcome": "win",
+            "intensity": 0.8641160618348759
+          },
+          {
+            "tick": 62,
+            "outcome": "loss",
+            "intensity": 0.8645258790134326
+          },
+          {
+            "tick": 63,
+            "outcome": "loss",
+            "intensity": 0.8647286189485568
+          },
+          {
+            "tick": 64,
+            "outcome": "loss",
+            "intensity": 0.8649298860340597
+          },
+          {
+            "tick": 67,
+            "outcome": "loss",
+            "intensity": 0.8655246496759139
+          },
+          {
+            "tick": 72,
+            "outcome": "win",
+            "intensity": 0.8664846167992868
+          }
+        ]
+      },
+      "stats": {
+        "wins": 5,
+        "warsFought": 20,
+        "warsWon": 5
+      },
+      "civilization": "military"
+    },
+    {
+      "name": "uiax",
+      "fitness": 0.3215555728776413,
+      "personality": {
+        "aggression": 0.95,
+        "curiosity": 0.7822909824344741,
+        "risk": 0.9,
+        "stability": 0.2
+      },
+      "consciousness": {
+        "trauma": 0.7377457325159499,
+        "aggressionBias": 0.52,
+        "trustDecay": 0.18,
+        "warMemories": [
+          {
+            "tick": 14,
+            "outcome": "loss",
+            "intensity": 0.7534885778661059
+          },
+          {
+            "tick": 23,
+            "outcome": "win",
+            "intensity": 0.8556994380883797
+          },
+          {
+            "tick": 25,
+            "outcome": "win",
+            "intensity": 0.8561850989813631
+          },
+          {
+            "tick": 32,
+            "outcome": "win",
+            "intensity": 0.857864164015403
+          },
+          {
+            "tick": 34,
+            "outcome": "win",
+            "intensity": 0.8583371773035203
+          },
+          {
+            "tick": 40,
+            "outcome": "win",
+            "intensity": 0.8597354585577163
+          },
+          {
+            "tick": 44,
+            "outcome": "loss",
+            "intensity": 0.86064848662665
+          },
+          {
+            "tick": 47,
+            "outcome": "win",
+            "intensity": 0.8613221571344767
+          },
+          {
+            "tick": 50,
+            "outcome": "win",
+            "intensity": 0.861985638465105
+          },
+          {
+            "tick": 52,
+            "outcome": "win",
+            "intensity": 0.8624220034460934
+          },
+          {
+            "tick": 53,
+            "outcome": "loss",
+            "intensity": 0.8626383335301211
+          },
+          {
+            "tick": 60,
+            "outcome": "loss",
+            "intensity": 0.8641160618348759
+          },
+          {
+            "tick": 63,
+            "outcome": "win",
+            "intensity": 0.8647286189485568
+          },
+          {
+            "tick": 64,
+            "outcome": "win",
+            "intensity": 0.8649298860340597
+          },
+          {
+            "tick": 67,
+            "outcome": "win",
+            "intensity": 0.8655246496759139
+          },
+          {
+            "tick": 69,
+            "outcome": "loss",
+            "intensity": 0.8659134295555492
+          },
+          {
+            "tick": 72,
+            "outcome": "loss",
+            "intensity": 0.8664846167992868
+          }
+        ]
+      },
+      "stats": {
+        "wins": 11,
+        "warsFought": 17,
+        "warsWon": 11
+      },
+      "civilization": "military"
+    },
+    {
+      "name": "garlic",
+      "fitness": 0.1791200930415585,
+      "personality": {
+        "aggression": 0.95,
+        "curiosity": 0.3104760281781756,
+        "risk": 0.9,
+        "stability": 0.2
+      },
+      "consciousness": {
+        "trauma": 0.6000000000000001,
+        "aggressionBias": 0.6600000000000001,
+        "trustDecay": 0.24,
+        "warMemories": [
+          {
+            "tick": 16,
+            "outcome": "win",
+            "intensity": 0.7539829551653561
+          },
+          {
+            "tick": 20,
+            "outcome": "win",
+            "intensity": 0.7549667332698765
+          },
+          {
+            "tick": 25,
+            "outcome": "loss",
+            "intensity": 0.8561850989813631
+          },
+          {
+            "tick": 27,
+            "outcome": "win",
+            "intensity": 0.8566682859172208
+          },
+          {
+            "tick": 32,
+            "outcome": "loss",
+            "intensity": 0.857864164015403
+          },
+          {
+            "tick": 36,
+            "outcome": "win",
+            "intensity": 0.8588068558318772
+          },
+          {
+            "tick": 37,
+            "outcome": "loss",
+            "intensity": 0.859040385799124
+          },
+          {
+            "tick": 38,
+            "outcome": "win",
+            "intensity": 0.8592730117353246
+          },
+          {
+            "tick": 40,
+            "outcome": "loss",
+            "intensity": 0.8597354585577163
+          },
+          {
+            "tick": 43,
+            "outcome": "win",
+            "intensity": 0.8604217700607302
+          },
+          {
+            "tick": 44,
+            "outcome": "win",
+            "intensity": 0.86064848662665
+          },
+          {
+            "tick": 45,
+            "outcome": "win",
+            "intensity": 0.8608741383527807
+          },
+          {
+            "tick": 47,
+            "outcome": "loss",
+            "intensity": 0.8613221571344767
+          },
+          {
+            "tick": 50,
+            "outcome": "loss",
+            "intensity": 0.861985638465105
+          },
+          {
+            "tick": 51,
+            "outcome": "loss",
+            "intensity": 0.8622044311720727
+          },
+          {
+            "tick": 52,
+            "outcome": "loss",
+            "intensity": 0.8624220034460934
+          },
+          {
+            "tick": 55,
+            "outcome": "win",
+            "intensity": 0.8630671807232664
+          },
+          {
+            "tick": 62,
+            "outcome": "win",
+            "intensity": 0.8645258790134326
+          },
+          {
+            "tick": 69,
+            "outcome": "win",
+            "intensity": 0.8659134295555492
+          },
+          {
+            "tick": 72,
+            "outcome": "win",
+            "intensity": 0.8664846167992868
+          }
+        ]
+      },
+      "stats": {
+        "wins": 13,
+        "warsFought": 21,
+        "warsWon": 13
+      },
+      "civilization": "military"
+    }
+  ],
+  "warHistory": [
+    {
+      "id": "war_14_1775993011810",
+      "tick": 14,
+      "attacker": "research",
+      "defender": "theocratic",
+      "intensity": 0.7534885778661059,
+      "winner": "theocratic",
+      "participants": [
+        "research",
+        "theocratic"
+      ]
+    },
+    {
+      "id": "war_16_1775993015814",
+      "tick": 16,
+      "attacker": "military",
+      "defender": "theocratic",
+      "intensity": 0.7539829551653561,
+      "winner": "theocratic",
+      "participants": [
+        "military",
+        "theocratic"
+      ]
+    },
+    {
+      "id": "war_20_1775993023825",
+      "tick": 20,
+      "attacker": "theocratic",
+      "defender": "military",
+      "intensity": 0.7549667332698765,
+      "winner": "theocratic",
+      "participants": [
+        "theocratic",
+        "military"
+      ]
+    },
+    {
+      "id": "war_23_1775993029832",
+      "tick": 23,
+      "attacker": "research",
+      "defender": "military",
+      "intensity": 0.8556994380883797,
+      "winner": "research",
+      "participants": [
+        "research",
+        "military"
+      ]
+    },
+    {
+      "id": "war_25_1775993033838",
+      "tick": 25,
+      "attacker": "theocratic",
+      "defender": "research",
+      "intensity": 0.8561850989813631,
+      "winner": "research",
+      "participants": [
+        "theocratic",
+        "research"
+      ]
+    },
+    {
+      "id": "war_27_1775993037847",
+      "tick": 27,
+      "attacker": "theocratic",
+      "defender": "military",
+      "intensity": 0.8566682859172208,
+      "winner": "theocratic",
+      "participants": [
+        "theocratic",
+        "military"
+      ]
+    },
+    {
+      "id": "war_32_1775993047857",
+      "tick": 32,
+      "attacker": "theocratic",
+      "defender": "research",
+      "intensity": 0.857864164015403,
+      "winner": "research",
+      "participants": [
+        "theocratic",
+        "research"
+      ]
+    },
+    {
+      "id": "war_34_1775993051864",
+      "tick": 34,
+      "attacker": "research",
+      "defender": "military",
+      "intensity": 0.8583371773035203,
+      "winner": "research",
+      "participants": [
+        "research",
+        "military"
+      ]
+    },
+    {
+      "id": "war_36_1775993055867",
+      "tick": 36,
+      "attacker": "military",
+      "defender": "theocratic",
+      "intensity": 0.8588068558318772,
+      "winner": "theocratic",
+      "participants": [
+        "military",
+        "theocratic"
+      ]
+    },
+    {
+      "id": "war_37_1775993057871",
+      "tick": 37,
+      "attacker": "theocratic",
+      "defender": "military",
+      "intensity": 0.859040385799124,
+      "winner": "military",
+      "participants": [
+        "theocratic",
+        "military"
+      ]
+    },
+    {
+      "id": "war_38_1775993059872",
+      "tick": 38,
+      "attacker": "military",
+      "defender": "theocratic",
+      "intensity": 0.8592730117353246,
+      "winner": "theocratic",
+      "participants": [
+        "military",
+        "theocratic"
+      ]
+    },
+    {
+      "id": "war_40_1775993063877",
+      "tick": 40,
+      "attacker": "research",
+      "defender": "theocratic",
+      "intensity": 0.8597354585577163,
+      "winner": "research",
+      "participants": [
+        "research",
+        "theocratic"
+      ]
+    },
+    {
+      "id": "war_43_1775993069883",
+      "tick": 43,
+      "attacker": "theocratic",
+      "defender": "military",
+      "intensity": 0.8604217700607302,
+      "winner": "theocratic",
+      "participants": [
+        "theocratic",
+        "military"
+      ]
+    },
+    {
+      "id": "war_44_1775993071884",
+      "tick": 44,
+      "attacker": "research",
+      "defender": "theocratic",
+      "intensity": 0.86064848662665,
+      "winner": "theocratic",
+      "participants": [
+        "research",
+        "theocratic"
+      ]
+    },
+    {
+      "id": "war_45_1775993073885",
+      "tick": 45,
+      "attacker": "theocratic",
+      "defender": "military",
+      "intensity": 0.8608741383527807,
+      "winner": "theocratic",
+      "participants": [
+        "theocratic",
+        "military"
+      ]
+    },
+    {
+      "id": "war_47_1775993077892",
+      "tick": 47,
+      "attacker": "research",
+      "defender": "theocratic",
+      "intensity": 0.8613221571344767,
+      "winner": "research",
+      "participants": [
+        "research",
+        "theocratic"
+      ]
+    },
+    {
+      "id": "war_50_1775993083897",
+      "tick": 50,
+      "attacker": "neutral",
+      "defender": "research",
+      "intensity": 0.861985638465105,
+      "winner": "research",
+      "participants": [
+        "neutral",
+        "research"
+      ]
+    },
+    {
+      "id": "war_51_1775993085896",
+      "tick": 51,
+      "attacker": "neutral",
+      "defender": "military",
+      "intensity": 0.8622044311720727,
+      "winner": "military",
+      "participants": [
+        "neutral",
+        "military"
+      ]
+    },
+    {
+      "id": "war_52_1775993087900",
+      "tick": 52,
+      "attacker": "neutral",
+      "defender": "research",
+      "intensity": 0.8624220034460934,
+      "winner": "research",
+      "participants": [
+        "neutral",
+        "research"
+      ]
+    },
+    {
+      "id": "war_53_1775993089902",
+      "tick": 53,
+      "attacker": "research",
+      "defender": "military",
+      "intensity": 0.8626383335301211,
+      "winner": "military",
+      "participants": [
+        "research",
+        "military"
+      ]
+    },
+    {
+      "id": "war_55_1775993093906",
+      "tick": 55,
+      "attacker": "military",
+      "defender": "neutral",
+      "intensity": 0.8630671807232664,
+      "winner": "neutral",
+      "participants": [
+        "military",
+        "neutral"
+      ]
+    },
+    {
+      "id": "war_60_1775993103913",
+      "tick": 60,
+      "attacker": "research",
+      "defender": "military",
+      "intensity": 0.8641160618348759,
+      "winner": "military",
+      "participants": [
+        "research",
+        "military"
+      ]
+    },
+    {
+      "id": "war_62_1775993107918",
+      "tick": 62,
+      "attacker": "neutral",
+      "defender": "military",
+      "intensity": 0.8645258790134326,
+      "winner": "neutral",
+      "participants": [
+        "neutral",
+        "military"
+      ]
+    },
+    {
+      "id": "war_63_1775993109920",
+      "tick": 63,
+      "attacker": "military",
+      "defender": "research",
+      "intensity": 0.8647286189485568,
+      "winner": "research",
+      "participants": [
+        "military",
+        "research"
+      ]
+    },
+    {
+      "id": "war_64_1775993111924",
+      "tick": 64,
+      "attacker": "military",
+      "defender": "research",
+      "intensity": 0.8649298860340597,
+      "winner": "research",
+      "participants": [
+        "military",
+        "research"
+      ]
+    },
+    {
+      "id": "war_67_1775993117932",
+      "tick": 67,
+      "attacker": "research",
+      "defender": "military",
+      "intensity": 0.8655246496759139,
+      "winner": "research",
+      "participants": [
+        "research",
+        "military"
+      ]
+    },
+    {
+      "id": "war_69_1775993121935",
+      "tick": 69,
+      "attacker": "neutral",
+      "defender": "research",
+      "intensity": 0.8659134295555492,
+      "winner": "neutral",
+      "participants": [
+        "neutral",
+        "research"
+      ]
+    },
+    {
+      "id": "war_72_1775993127941",
+      "tick": 72,
+      "attacker": "research",
+      "defender": "military",
+      "intensity": 0.8664846167992868,
+      "winner": "military",
+      "participants": [
+        "research",
+        "military"
+      ]
+    }
+  ]
+}

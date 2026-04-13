@@ -1,0 +1,158 @@
+require('dotenv').config();
+const express = require('express');
+const { Octokit } = require('@octokit/rest');
+const simpleGit = require('simple-git');
+const fs = require('fs');
+const path = require('path');
+
+const app = express();
+app.use(express.json());
+const port = process.env.PORT || 3000;
+
+// ========== GITHUB MANAGER ==========
+class GitHubManager {
+  constructor(token, username) {
+    this.octokit = new Octokit({ auth: token });
+    this.username = username;
+    this.git = simpleGit();
+  }
+
+  async createRepo(name, description) {
+    const response = await this.octokit.repos.createForAuthenticatedUser({
+      name: name,
+      description: description || 'AI Galaxy Universe',
+      private: false,
+      auto_init: true
+    });
+    console.log('📦 Repo created: ' + response.data.html_url);
+    return response.data;
+  }
+
+  async pushUniverseState(universeId, worldState) {
+    const repoName = 'universe_' + universeId;
+    const dir = './temp_' + universeId;
+    if (!fs.existsSync(dir)) fs.mkdirSync(dir);
+    fs.writeFileSync(dir + '/state.json', JSON.stringify(worldState, null, 2));
+    
+    await this.git.cwd(dir);
+    await this.git.init();
+    await this.git.add('.');
+    await this.git.commit('State update');
+    await this.git.branch(['-M', 'master']);
+    await this.git.addRemote('origin', 'https://' + this.username + ':' + this.octokit.auth + '@github.com/' + this.username + '/' + repoName + '.git');
+    await this.git.push('origin', 'master');
+    
+    fs.rmSync(dir, { recursive: true, force: true });
+    return 'https://github.com/' + this.username + '/' + repoName;
+  });
+    return 'https://github.com/' + this.username + '/' + repoName;
+  }
+}
+
+const token = process.env.GITHUB_TOKEN;
+const username = process.env.GITHUB_USERNAME;
+let gitManager = (token && username) ? new GitHubManager(token, username) : null;
+if (gitManager) console.log('🔗 GitHub Manager ready');
+
+// ========== CLOUD ORCHESTRATOR ==========
+class CloudOrchestrator {
+  constructor() {
+    this.nodes = [];
+    this.loadHistory = [];
+  }
+
+  assessLoad(world) {
+    const load = {
+      entropy: world.entropy || 0.5,
+      total: Math.min(1, (world.entropy || 0.5) * 0.8)
+    };
+    this.loadHistory.push(load);
+    if (this.loadHistory.length > 100) this.loadHistory.shift();
+    return load;
+  }
+
+  makeDecision(load) {
+    if (load.total > 0.8) return { action: 'SCALE_UP', reason: 'High load' };
+    if (load.total < 0.3 && this.nodes.length > 1) return { action: 'SCALE_DOWN', reason: 'Low load' };
+    return { action: 'STABLE', reason: 'Normal' };
+  }
+
+  async spawnNode() {
+    const nodeId = `node_${Date.now()}`;
+    this.nodes.push({ id: nodeId, status: 'running', startedAt: Date.now() });
+    console.log('☁️ Нода создана: ' + nodeId);
+    return nodeId;
+  }
+
+  async destroyNode(nodeId) {
+    this.nodes = this.nodes.filter(n => n.id !== nodeId);
+    console.log('☁️ Нода удалена: ' + nodeId);
+  }
+
+  getStatus() {
+    const avgLoad = this.loadHistory.slice(-5).reduce((a, b) => a + b.total, 0) / 5 || 0;
+    return { activeNodes: this.nodes.length, avgLoad: avgLoad.toFixed(2) };
+  }
+}
+
+const cloudOrchestrator = new CloudOrchestrator();
+
+// ========== API ROUTES ==========
+app.get('/api/github/status', (req, res) => {
+  res.json({ configured: !!gitManager, username: username || null });
+});
+
+app.post('/api/github/create-repo', async (req, res) => {
+  if (!gitManager) return res.status(500).json({ error: 'GitHub not configured' });
+  try {
+    const repo = await gitManager.createRepo('test-' + Date.now());
+    res.json({ url: repo.html_url });
+  } catch(e) {
+    res.status(500).json({ error: e.message });
+  }
+});
+
+app.post('/api/github/push', async (req, res) => {
+  if (!gitManager) return res.status(500).json({ error: 'GitHub not configured' });
+  try {
+    const worldState = { entropy: 0.5, gods: [], timestamp: Date.now() };
+    const url = await gitManager.pushUniverseState('manual_' + Date.now(), worldState);
+    res.json({ success: true, url: url });
+  } catch(e) {
+    res.status(500).json({ error: e.message });
+  }
+});
+
+app.get('/api/cloud/status', (req, res) => {
+  res.json(cloudOrchestrator.getStatus());
+});
+
+app.post('/api/cloud/scale-up', async (req, res) => {
+  const nodeId = await cloudOrchestrator.spawnNode();
+  res.json({ success: true, nodeId: nodeId });
+});
+
+app.post('/api/cloud/scale-down/:nodeId', async (req, res) => {
+  const result = await cloudOrchestrator.destroyNode(req.params.nodeId);
+  res.json({ success: result });
+});
+
+app.get('/', (req, res) => {
+  res.json({ 
+    status: 'AI Galaxy Core V116', 
+    github: !!gitManager,
+    cloud: cloudOrchestrator.getStatus()
+  });
+});
+
+// ========== ЗАПУСК ==========
+app.listen(port, () => {
+  console.log('');
+  console.log('💀 AI GALAXY CORE V116 ONLINE');
+  console.log('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━');
+  console.log('🔗 GitHub:    ' + (gitManager ? '✅ CONNECTED' : '❌ NOT CONFIGURED'));
+  console.log('☁️ Cloud:      ' + cloudOrchestrator.nodes.length + ' active nodes');
+  console.log('🌐 Port:      ' + port);
+  console.log('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━');
+  console.log('');
+});

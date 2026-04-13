@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AutoGame_187608</title>
+    <style>
+        body { font-family: monospace; background: #0a0a2a; color: #fff; padding: 20px; }
+        .status { background: rgba(0,0,0,0.5); padding: 10px; border-radius: 5px; }
+        .info { margin: 10px 0; }
+    </style>
+</head>
+<body>
+    <h1>🎮 AutoGame_187608</h1>
+    <div class="status">
+        <div>Status: <span id="status">connecting...</span></div>
+        <div>Tick: <span id="tick">0</span></div>
+        <div>Players: <span id="players">0</span></div>
+    </div>
+    <div class="info" id="info"></div>
+    <script>
+        const ws = new WebSocket('ws://' + location.host);
+        ws.onmessage = (e) => {
+            const data = JSON.parse(e.data);
+            if (data.type === 'connected') {
+                document.getElementById('status').textContent = 'online';
+            }
+            if (data.type === 'state') {
+                document.getElementById('tick').textContent = data.tick;
+                document.getElementById('info').innerHTML = '<pre>' + JSON.stringify(data.world, null, 2) + '</pre>';
+            }
+        };
+        setInterval(() => {
+            fetch('/api/status').then(r => r.json()).then(d => {
+                document.getElementById('players').textContent = d.players;
+            });
+        }, 2000);
+    </script>
+</body>
+</html>

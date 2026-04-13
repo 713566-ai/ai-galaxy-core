@@ -1,0 +1,1017 @@
+{
+  "history": [
+    {
+      "timestamp": 1776091540358,
+      "tick": 191,
+      "alive": 11,
+      "entropy": 0.5414754677423301,
+      "consciousness": 0.6751147193546019,
+      "health": "stable",
+      "action": "balance",
+      "success": true
+    },
+    {
+      "timestamp": 1776091543357,
+      "tick": 193,
+      "alive": 11,
+      "entropy": 0.5413200704098784,
+      "consciousness": 0.675207957754073,
+      "health": "stable",
+      "action": "balance",
+      "success": true
+    },
+    {
+      "timestamp": 1776091546359,
+      "tick": 194,
+      "alive": 11,
+      "entropy": 0.5416799357078553,
+      "consciousness": 0.6749920385752868,
+      "health": "stable",
+      "action": "balance",
+      "success": true
+    },
+    {
+      "timestamp": 1776091549361,
+      "tick": 195,
+      "alive": 11,
+      "entropy": 0.5440712197641598,
+      "consciousness": 0.6735572681415041,
+      "health": "stable",
+      "action": "balance",
+      "success": true
+    },
+    {
+      "timestamp": 1776091552364,
+      "tick": 197,
+      "alive": 11,
+      "entropy": 0.540121562501332,
+      "consciousness": 0.6759270624992009,
+      "health": "stable",
+      "action": "balance",
+      "success": true
+    },
+    {
+      "timestamp": 1776091555370,
+      "tick": 198,
+      "alive": 11,
+      "entropy": 0.5388240406672342,
+      "consciousness": 0.6767055755996595,
+      "health": "stable",
+      "action": "balance",
+      "success": false
+    },
+    {
+      "timestamp": 1776091558380,
+      "tick": 200,
+      "alive": 11,
+      "entropy": 0.5513907814657297,
+      "consciousness": 0.6751655311205622,
+      "health": "stable",
+      "action": "balance",
+      "success": false
+    },
+    {
+      "timestamp": 1776091561371,
+      "tick": 202,
+      "alive": 11,
+      "entropy": 0.5501923784922853,
+      "consciousness": 0.6698845729046288,
+      "health": "stable",
+      "action": "balance",
+      "success": false
+    },
+    {
+      "timestamp": 1776091564386,
+      "tick": 203,
+      "alive": 11,
+      "entropy": 0.5509665874541099,
+      "consciousness": 0.669420047527534,
+      "health": "stable",
+      "action": "balance",
+      "success": true
+    },
+    {
+      "timestamp": 1776091567382,
+      "tick": 205,
+      "alive": 11,
+      "entropy": 0.5485560410814453,
+      "consciousness": 0.6708663753511328,
+      "health": "stable",
+      "action": "balance",
+      "success": false
+    },
+    {
+      "timestamp": 1776091570381,
+      "tick": 206,
+      "alive": 11,
+      "entropy": 0.5566746912990261,
+      "consciousness": 0.6659951852205843,
+      "health": "stable",
+      "action": "balance",
+      "success": false
+    },
+    {
+      "timestamp": 1776091573387,
+      "tick": 207,
+      "alive": 11,
+      "entropy": 0.5571908109068273,
+      "consciousness": 0.6656855134559037,
+      "health": "stable",
+      "action": "balance",
+      "success": false
+    },
+    {
+      "timestamp": 1776091576387,
+      "tick": 209,
+      "alive": 11,
+      "entropy": 0.556426382485932,
+      "consciousness": 0.6661441705084408,
+      "health": "stable",
+      "action": "balance",
+      "success": false
+    },
+    {
+      "timestamp": 1776091579389,
+      "tick": 210,
+      "alive": 11,
+      "entropy": 0.5679326159607385,
+      "consciousness": 0.6652404304235568,
+      "health": "stable",
+      "action": "balance",
+      "success": false
+    },
+    {
+      "timestamp": 1776091582388,
+      "tick": 212,
+      "alive": 11,
+      "entropy": 0.564763340260153,
+      "consciousness": 0.6611419958439082,
+      "health": "stable",
+      "action": "balance",
+      "success": false
+    },
+    {
+      "timestamp": 1776091585387,
+      "tick": 213,
+      "alive": 11,
+      "entropy": 0.5645309583168547,
+      "consciousness": 0.6612814250098872,
+      "health": "stable",
+      "action": "balance",
+      "success": false
+    },
+    {
+      "timestamp": 1776091588396,
+      "tick": 215,
+      "alive": 11,
+      "entropy": 0.565150443049759,
+      "consciousness": 0.6609097341701446,
+      "health": "stable",
+      "action": "balance",
+      "success": false
+    },
+    {
+      "timestamp": 1776091591399,
+      "tick": 216,
+      "alive": 11,
+      "entropy": 0.5631513128764567,
+      "consciousness": 0.662109212274126,
+      "health": "stable",
+      "action": "balance",
+      "success": false
+    },
+    {
+      "timestamp": 1776091594391,
+      "tick": 218,
+      "alive": 11,
+      "entropy": 0.5566937851095507,
+      "consciousness": 0.6659837289342696,
+      "health": "stable",
+      "action": "balance",
+      "success": false
+    },
+    {
+      "timestamp": 1776091597394,
+      "tick": 219,
+      "alive": 11,
+      "entropy": 0.5574607708645878,
+      "consciousness": 0.6655235374812474,
+      "health": "stable",
+      "action": "balance",
+      "success": false
+    },
+    {
+      "timestamp": 1776091600395,
+      "tick": 221,
+      "alive": 11,
+      "entropy": 0.5568264905840822,
+      "consciousness": 0.6659041056495507,
+      "health": "stable",
+      "action": "balance",
+      "success": false
+    },
+    {
+      "timestamp": 1776091603398,
+      "tick": 222,
+      "alive": 11,
+      "entropy": 0.555406829284608,
+      "consciousness": 0.6667559024292351,
+      "health": "stable",
+      "action": "balance",
+      "success": false
+    },
+    {
+      "timestamp": 1776091606398,
+      "tick": 224,
+      "alive": 11,
+      "entropy": 0.5523221217382414,
+      "consciousness": 0.6686067269570553,
+      "health": "stable",
+      "action": "balance",
+      "success": false
+    },
+    {
+      "timestamp": 1776091609410,
+      "tick": 225,
+      "alive": 11,
+      "entropy": 0.5517534927627239,
+      "consciousness": 0.6689479043423656,
+      "health": "stable",
+      "action": "balance",
+      "success": true
+    },
+    {
+      "timestamp": 1776091612414,
+      "tick": 227,
+      "alive": 11,
+      "entropy": 0.5471844219965584,
+      "consciousness": 0.671689346802065,
+      "health": "stable",
+      "action": "balance",
+      "success": true
+    },
+    {
+      "timestamp": 1776091615416,
+      "tick": 228,
+      "alive": 11,
+      "entropy": 0.5483855052743272,
+      "consciousness": 0.6709686968354037,
+      "health": "stable",
+      "action": "balance",
+      "success": true
+    },
+    {
+      "timestamp": 1776091618420,
+      "tick": 230,
+      "alive": 11,
+      "entropy": 0.5418791051387603,
+      "consciousness": 0.6748725369167439,
+      "health": "stable",
+      "action": "balance",
+      "success": true
+    },
+    {
+      "timestamp": 1776091621412,
+      "tick": 231,
+      "alive": 11,
+      "entropy": 0.541324739721941,
+      "consciousness": 0.6752051561668355,
+      "health": "stable",
+      "action": "balance",
+      "success": true
+    },
+    {
+      "timestamp": 1776091624413,
+      "tick": 233,
+      "alive": 11,
+      "entropy": 0.5424575098839405,
+      "consciousness": 0.6745254940696357,
+      "health": "stable",
+      "action": "balance",
+      "success": true
+    },
+    {
+      "timestamp": 1776091627419,
+      "tick": 234,
+      "alive": 11,
+      "entropy": 0.5434567729952712,
+      "consciousness": 0.6739259362028374,
+      "health": "stable",
+      "action": "balance",
+      "success": true
+    },
+    {
+      "timestamp": 1776091630422,
+      "tick": 236,
+      "alive": 11,
+      "entropy": 0.5454194060998514,
+      "consciousness": 0.6727483563400891,
+      "health": "stable",
+      "action": "balance",
+      "success": true
+    },
+    {
+      "timestamp": 1776091633426,
+      "tick": 237,
+      "alive": 11,
+      "entropy": 0.5456081243395591,
+      "consciousness": 0.6726351253962646,
+      "health": "stable",
+      "action": "balance",
+      "success": true
+    },
+    {
+      "timestamp": 1776091636421,
+      "tick": 239,
+      "alive": 11,
+      "entropy": 0.5493982808033234,
+      "consciousness": 0.670361031518006,
+      "health": "stable",
+      "action": "balance",
+      "success": false
+    },
+    {
+      "timestamp": 1776091639425,
+      "tick": 240,
+      "alive": 11,
+      "entropy": 0.5518245989823988,
+      "consciousness": 0.6689052406105607,
+      "health": "stable",
+      "action": "balance",
+      "success": false
+    },
+    {
+      "timestamp": 1776091642436,
+      "tick": 242,
+      "alive": 11,
+      "entropy": 0.5500833447121293,
+      "consciousness": 0.6699499931727224,
+      "health": "stable",
+      "action": "balance",
+      "success": true
+    },
+    {
+      "timestamp": 1776091645430,
+      "tick": 244,
+      "alive": 11,
+      "entropy": 0.5489591061262007,
+      "consciousness": 0.6706245363242795,
+      "health": "stable",
+      "action": "balance",
+      "success": true
+    },
+    {
+      "timestamp": 1776091648432,
+      "tick": 245,
+      "alive": 11,
+      "entropy": 0.5487258767657122,
+      "consciousness": 0.6707644739405727,
+      "health": "stable",
+      "action": "balance",
+      "success": true
+    },
+    {
+      "timestamp": 1776091651436,
+      "tick": 247,
+      "alive": 11,
+      "entropy": 0.5476134464115623,
+      "consciousness": 0.6714319321530626,
+      "health": "stable",
+      "action": "balance",
+      "success": false
+    },
+    {
+      "timestamp": 1776091654441,
+      "tick": 248,
+      "alive": 11,
+      "entropy": 0.557494763087481,
+      "consciousness": 0.6715031421475114,
+      "health": "stable",
+      "action": "balance",
+      "success": false
+    },
+    {
+      "timestamp": 1776091657444,
+      "tick": 250,
+      "alive": 11,
+      "entropy": 0.5561128884724751,
+      "consciousness": 0.666332266916515,
+      "health": "stable",
+      "action": "balance",
+      "success": false
+    },
+    {
+      "timestamp": 1776091660452,
+      "tick": 251,
+      "alive": 11,
+      "entropy": 0.5550495500257324,
+      "consciousness": 0.6669702699845605,
+      "health": "stable",
+      "action": "balance",
+      "success": false
+    },
+    {
+      "timestamp": 1776091663455,
+      "tick": 253,
+      "alive": 11,
+      "entropy": 0.5545766064632597,
+      "consciousness": 0.6872540361220443,
+      "health": "stable",
+      "action": "balance",
+      "success": false
+    },
+    {
+      "timestamp": 1776091666459,
+      "tick": 254,
+      "alive": 11,
+      "entropy": 0.5630434022383984,
+      "consciousness": 0.6621739586569609,
+      "health": "stable",
+      "action": "balance",
+      "success": false
+    },
+    {
+      "timestamp": 1776091669458,
+      "tick": 256,
+      "alive": 11,
+      "entropy": 0.5619257645426076,
+      "consciousness": 0.6628445412744355,
+      "health": "stable",
+      "action": "balance",
+      "success": false
+    },
+    {
+      "timestamp": 1776091672463,
+      "tick": 257,
+      "alive": 11,
+      "entropy": 0.5647592479132568,
+      "consciousness": 0.6811444512520459,
+      "health": "stable",
+      "action": "balance",
+      "success": false
+    },
+    {
+      "timestamp": 1776091675469,
+      "tick": 259,
+      "alive": 11,
+      "entropy": 0.5752139914997951,
+      "consciousness": 0.6608716051001229,
+      "health": "stable",
+      "action": "balance",
+      "success": false
+    },
+    {
+      "timestamp": 1776091678458,
+      "tick": 260,
+      "alive": 11,
+      "entropy": 0.5746827802280687,
+      "consciousness": 0.6551903318631588,
+      "health": "stable",
+      "action": "balance",
+      "success": false
+    },
+    {
+      "timestamp": 1776091681473,
+      "tick": 261,
+      "alive": 11,
+      "entropy": 0.574833876358369,
+      "consciousness": 0.6550996741849786,
+      "health": "stable",
+      "action": "balance",
+      "success": false
+    },
+    {
+      "timestamp": 1776091684473,
+      "tick": 263,
+      "alive": 11,
+      "entropy": 0.5679859946664804,
+      "consciousness": 0.6592084032001118,
+      "health": "stable",
+      "action": "balance",
+      "success": false
+    },
+    {
+      "timestamp": 1776091687478,
+      "tick": 265,
+      "alive": 11,
+      "entropy": 0.5686364281678152,
+      "consciousness": 0.6588181430993109,
+      "health": "stable",
+      "action": "balance",
+      "success": false
+    },
+    {
+      "timestamp": 1776091690474,
+      "tick": 266,
+      "alive": 11,
+      "entropy": 0.5682266149357099,
+      "consciousness": 0.659064031038574,
+      "health": "stable",
+      "action": "balance",
+      "success": false
+    },
+    {
+      "timestamp": 1776091693483,
+      "tick": 268,
+      "alive": 11,
+      "entropy": 0.5691555299071741,
+      "consciousness": 0.6585066820556955,
+      "health": "stable",
+      "action": "balance",
+      "success": false
+    },
+    {
+      "timestamp": 1776091696483,
+      "tick": 269,
+      "alive": 11,
+      "entropy": 0.5621388733535868,
+      "consciousness": 0.662716675987848,
+      "health": "stable",
+      "action": "balance",
+      "success": false
+    },
+    {
+      "timestamp": 1776091699487,
+      "tick": 271,
+      "alive": 11,
+      "entropy": 0.5615083811982551,
+      "consciousness": 0.663094971281047,
+      "health": "stable",
+      "action": "balance",
+      "success": false
+    },
+    {
+      "timestamp": 1776091702489,
+      "tick": 272,
+      "alive": 11,
+      "entropy": 0.5627375005182466,
+      "consciousness": 0.662357499689052,
+      "health": "stable",
+      "action": "balance",
+      "success": false
+    },
+    {
+      "timestamp": 1776091705483,
+      "tick": 274,
+      "alive": 11,
+      "entropy": 0.5652033496351676,
+      "consciousness": 0.6608779902188995,
+      "health": "stable",
+      "action": "balance",
+      "success": false
+    },
+    {
+      "timestamp": 1776091708496,
+      "tick": 275,
+      "alive": 11,
+      "entropy": 0.5573236393007116,
+      "consciousness": 0.6656058164195731,
+      "health": "stable",
+      "action": "balance",
+      "success": false
+    },
+    {
+      "timestamp": 1776091711488,
+      "tick": 277,
+      "alive": 11,
+      "entropy": 0.5551283444231546,
+      "consciousness": 0.6669229933461072,
+      "health": "stable",
+      "action": "balance",
+      "success": false
+    },
+    {
+      "timestamp": 1776091714502,
+      "tick": 278,
+      "alive": 11,
+      "entropy": 0.5578546559275324,
+      "consciousness": 0.6652872064434806,
+      "health": "stable",
+      "action": "balance",
+      "success": false
+    },
+    {
+      "timestamp": 1776091717495,
+      "tick": 280,
+      "alive": 11,
+      "entropy": 0.5585461375330324,
+      "consciousness": 0.6648723174801805,
+      "health": "stable",
+      "action": "balance",
+      "success": false
+    },
+    {
+      "timestamp": 1776091720503,
+      "tick": 281,
+      "alive": 11,
+      "entropy": 0.5571243405602581,
+      "consciousness": 0.6857253956638452,
+      "health": "stable",
+      "action": "balance",
+      "success": false
+    },
+    {
+      "timestamp": 1776091723512,
+      "tick": 283,
+      "alive": 11,
+      "entropy": 0.559276240691077,
+      "consciousness": 0.6644342555853539,
+      "health": "stable",
+      "action": "balance",
+      "success": false
+    },
+    {
+      "timestamp": 1776091726510,
+      "tick": 284,
+      "alive": 11,
+      "entropy": 0.558102076341718,
+      "consciousness": 0.6651387541949692,
+      "health": "stable",
+      "action": "balance",
+      "success": false
+    },
+    {
+      "timestamp": 1776091729508,
+      "tick": 286,
+      "alive": 11,
+      "entropy": 0.556380102118842,
+      "consciousness": 0.6661719387286948,
+      "health": "stable",
+      "action": "balance",
+      "success": false
+    },
+    {
+      "timestamp": 1776091732514,
+      "tick": 287,
+      "alive": 11,
+      "entropy": 0.5526954923265851,
+      "consciousness": 0.6683827046040489,
+      "health": "stable",
+      "action": "balance",
+      "success": false
+    },
+    {
+      "timestamp": 1776091735519,
+      "tick": 288,
+      "alive": 11,
+      "entropy": 0.552969209649019,
+      "consciousness": 0.6682184742105886,
+      "health": "stable",
+      "action": "balance",
+      "success": true
+    },
+    {
+      "timestamp": 1776091738516,
+      "tick": 290,
+      "alive": 11,
+      "entropy": 0.5491873484360884,
+      "consciousness": 0.670487590938347,
+      "health": "stable",
+      "action": "balance",
+      "success": true
+    },
+    {
+      "timestamp": 1776091741514,
+      "tick": 291,
+      "alive": 11,
+      "entropy": 0.5485263125156996,
+      "consciousness": 0.6708842124905803,
+      "health": "stable",
+      "action": "balance",
+      "success": true
+    },
+    {
+      "timestamp": 1776091744514,
+      "tick": 293,
+      "alive": 11,
+      "entropy": 0.5460436163215684,
+      "consciousness": 0.672373830207059,
+      "health": "stable",
+      "action": "balance",
+      "success": true
+    },
+    {
+      "timestamp": 1776091747521,
+      "tick": 294,
+      "alive": 11,
+      "entropy": 0.5435731975233391,
+      "consciousness": 0.6738560814859966,
+      "health": "stable",
+      "action": "balance",
+      "success": true
+    },
+    {
+      "timestamp": 1776091750517,
+      "tick": 296,
+      "alive": 11,
+      "entropy": 0.5426120587991907,
+      "consciousness": 0.6744327647204855,
+      "health": "stable",
+      "action": "balance",
+      "success": true
+    },
+    {
+      "timestamp": 1776091753527,
+      "tick": 297,
+      "alive": 11,
+      "entropy": 0.5419632531363502,
+      "consciousness": 0.6748220481181899,
+      "health": "stable",
+      "action": "balance",
+      "success": true
+    },
+    {
+      "timestamp": 1776091756525,
+      "tick": 299,
+      "alive": 11,
+      "entropy": 0.5400004394361928,
+      "consciousness": 0.6759997363382844,
+      "health": "stable",
+      "action": "balance",
+      "success": true
+    },
+    {
+      "timestamp": 1776091759525,
+      "tick": 300,
+      "alive": 11,
+      "entropy": 0.5417468847001072,
+      "consciousness": 0.6749518691799357,
+      "health": "stable",
+      "action": "balance",
+      "success": false
+    },
+    {
+      "timestamp": 1776091762537,
+      "tick": 302,
+      "alive": 11,
+      "entropy": 0.5533789199845438,
+      "consciousness": 0.6679726480092738,
+      "health": "stable",
+      "action": "balance",
+      "success": false
+    },
+    {
+      "timestamp": 1776091765528,
+      "tick": 303,
+      "alive": 11,
+      "entropy": 0.5510642063286271,
+      "consciousness": 0.6693614762028237,
+      "health": "stable",
+      "action": "balance",
+      "success": false
+    },
+    {
+      "timestamp": 1776091768536,
+      "tick": 305,
+      "alive": 11,
+      "entropy": 0.552354578967284,
+      "consciousness": 0.6885872526196296,
+      "health": "stable",
+      "action": "balance",
+      "success": false
+    },
+    {
+      "timestamp": 1776091771543,
+      "tick": 306,
+      "alive": 11,
+      "entropy": 0.5615895941217345,
+      "consciousness": 0.6690462435269593,
+      "health": "stable",
+      "action": "balance",
+      "success": false
+    },
+    {
+      "timestamp": 1776091774537,
+      "tick": 308,
+      "alive": 11,
+      "entropy": 0.5605860354199729,
+      "consciousness": 0.6636483787480163,
+      "health": "stable",
+      "action": "balance",
+      "success": false
+    },
+    {
+      "timestamp": 1776091777539,
+      "tick": 309,
+      "alive": 11,
+      "entropy": 0.5623220971954932,
+      "consciousness": 0.6626067416827042,
+      "health": "stable",
+      "action": "balance",
+      "success": false
+    },
+    {
+      "timestamp": 1776091780553,
+      "tick": 311,
+      "alive": 11,
+      "entropy": 0.5726758771856758,
+      "consciousness": 0.6623944736885945,
+      "health": "stable",
+      "action": "balance",
+      "success": false
+    },
+    {
+      "timestamp": 1776091783552,
+      "tick": 312,
+      "alive": 11,
+      "entropy": 0.5729242098344449,
+      "consciousness": 0.6562454740993331,
+      "health": "stable",
+      "action": "balance",
+      "success": false
+    },
+    {
+      "timestamp": 1776091786546,
+      "tick": 314,
+      "alive": 11,
+      "entropy": 0.563649863015151,
+      "consciousness": 0.6575667579898994,
+      "health": "stable",
+      "action": "balance",
+      "success": false
+    },
+    {
+      "timestamp": 1776091789560,
+      "tick": 315,
+      "alive": 11,
+      "entropy": 0.562638484893863,
+      "consciousness": 0.6624169090636822,
+      "health": "stable",
+      "action": "balance",
+      "success": false
+    },
+    {
+      "timestamp": 1776091792564,
+      "tick": 317,
+      "alive": 11,
+      "entropy": 0.5610437894003598,
+      "consciousness": 0.6633737263597841,
+      "health": "stable",
+      "action": "balance",
+      "success": false
+    },
+    {
+      "timestamp": 1776091795557,
+      "tick": 318,
+      "alive": 11,
+      "entropy": 0.563380592042728,
+      "consciousness": 0.6619716447743633,
+      "health": "stable",
+      "action": "balance",
+      "success": false
+    },
+    {
+      "timestamp": 1776091798572,
+      "tick": 320,
+      "alive": 11,
+      "entropy": 0.5553590906472764,
+      "consciousness": 0.6630939395684824,
+      "health": "stable",
+      "action": "balance",
+      "success": false
+    },
+    {
+      "timestamp": 1776091801566,
+      "tick": 321,
+      "alive": 11,
+      "entropy": 0.5549394399696479,
+      "consciousness": 0.6670363360182112,
+      "health": "stable",
+      "action": "balance",
+      "success": false
+    },
+    {
+      "timestamp": 1776091804579,
+      "tick": 323,
+      "alive": 11,
+      "entropy": 0.5562711433713843,
+      "consciousness": 0.6662373139771695,
+      "health": "stable",
+      "action": "balance",
+      "success": false
+    },
+    {
+      "timestamp": 1776091807582,
+      "tick": 324,
+      "alive": 11,
+      "entropy": 0.5550793090126043,
+      "consciousness": 0.6669524145924375,
+      "health": "stable",
+      "action": "balance",
+      "success": false
+    },
+    {
+      "timestamp": 1776091810583,
+      "tick": 326,
+      "alive": 11,
+      "entropy": 0.5513996977522982,
+      "consciousness": 0.6657335348318012,
+      "health": "stable",
+      "action": "balance",
+      "success": false
+    },
+    {
+      "timestamp": 1776091813575,
+      "tick": 327,
+      "alive": 11,
+      "entropy": 0.5526701250450036,
+      "consciousness": 0.6683979249729979,
+      "health": "stable",
+      "action": "balance",
+      "success": false
+    },
+    {
+      "timestamp": 1776091816588,
+      "tick": 329,
+      "alive": 11,
+      "entropy": 0.5555955143502234,
+      "consciousness": 0.666642691389866,
+      "health": "stable",
+      "action": "balance",
+      "success": false
+    },
+    {
+      "timestamp": 1776091819592,
+      "tick": 330,
+      "alive": 11,
+      "entropy": 0.5553588020043566,
+      "consciousness": 0.6667847187973861,
+      "health": "stable",
+      "action": "balance",
+      "success": false
+    },
+    {
+      "timestamp": 1776091822587,
+      "tick": 332,
+      "alive": 11,
+      "entropy": 0.5565317645650355,
+      "consciousness": 0.6660809412609787,
+      "health": "stable",
+      "action": "balance",
+      "success": false
+    },
+    {
+      "timestamp": 1776091825588,
+      "tick": 333,
+      "alive": 11,
+      "entropy": 0.5568822434532129,
+      "consciousness": 0.6658706539280723,
+      "health": "stable",
+      "action": "balance",
+      "success": false
+    },
+    {
+      "timestamp": 1776091828596,
+      "tick": 335,
+      "alive": 11,
+      "entropy": 0.5573379357842657,
+      "consciousness": 0.6655972385294406,
+      "health": "stable",
+      "action": "balance",
+      "success": false
+    },
+    {
+      "timestamp": 1776091831589,
+      "tick": 336,
+      "alive": 11,
+      "entropy": 0.5559098091983873,
+      "consciousness": 0.6664541144809677,
+      "health": "stable",
+      "action": "balance",
+      "success": false
+    },
+    {
+      "timestamp": 1776091834598,
+      "tick": 338,
+      "alive": 11,
+      "entropy": 0.5581458568994153,
+      "consciousness": 0.6651124858603508,
+      "health": "stable",
+      "action": "balance",
+      "success": false
+    },
+    {
+      "timestamp": 1776091837599,
+      "tick": 339,
+      "alive": 11,
+      "entropy": 0.5605246641009428,
+      "consciousness": 0.6636852015394343,
+      "health": "stable",
+      "action": "balance",
+      "success": false
+    }
+  ],
+  "learnings": [],
+  "stats": {
+    "totalDecisions": 752,
+    "successfulDecisions": 433,
+    "failedDecisions": 319
+  },
+  "patterns": {
+    "evolve_high": 394,
+    "evolve_low": 39,
+    "revive_all_low": 1,
+    "balance_high": 310,
+    "balance_low": 8
+  }
+}

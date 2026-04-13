@@ -1,0 +1,1 @@
+class AIBehavior { decide(action) { return action === 'attack' ? Math.random() > 0.5 : true; } } module.exports = { AIBehavior };

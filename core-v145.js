@@ -1,0 +1,301 @@
+#!/usr/bin/env node
+// ============================================================
+// 🌍🧬 AI GALAXY CORE V145 — GAME CIVILIZATION LAYER
+// ============================================================
+// ✅ Игры как цивилизации
+// ✅ Популяция игроков
+// ✅ Эволюция и войны
+// ✅ Естественный отбор
+// ============================================================
+
+const express = require("express");
+const GameFactoryV142 = require("./GameFactoryV142");
+const creativeLoop = require("./creativeLoop");
+const GameBrain = require("./gameBrain");
+const GameCivilization = require("./gameCivilization");
+const gameWars = require("./gameWars");
+
+const app = express();
+app.use(express.json());
+const PORT = 3000;
+
+// =========================
+// 🌍 СОСТОЯНИЕ МИРА
+// =========================
+let world = {
+  tick: 0,
+  entropy: 0.5,
+  stability: 0.65,
+  consciousness: 0.3
+};
+
+let swarm = { tick: 0, entropy: 0.5, aliveNodes: 11, health: "stable" };
+
+// =========================
+// 🏭 ФАБРИКА И МОЗГ
+// =========================
+const gameFactory = new GameFactoryV142({ world, swarm });
+const gameBrain = new GameBrain(gameFactory);
+
+// =========================
+// 🌍 ЦИВИЛИЗАЦИИ ИГР
+// =========================
+let civilizations = [];
+let nextCivilizationId = 1;
+
+// =========================
+// 🔁 ОСНОВНОЙ ЦИКЛ
+// =========================
+setInterval(() => {
+  world.tick++;
+  world.entropy += (Math.random() - 0.5) * 0.01;
+  world.entropy = Math.max(0.2, Math.min(0.8, world.entropy));
+  world.stability = 1 - world.entropy;
+  world.consciousness = Math.min(1, world.consciousness + 0.001);
+  
+  swarm.tick++;
+  swarm.entropy = world.entropy;
+  
+  // 🧬 ЭВОЛЮЦИЯ ЦИВИЛИЗАЦИЙ
+  for (const civ of civilizations) {
+    civ.tick();
+  }
+  
+  // ⚔️ ВОЙНЫ
+  gameWars.tick();
+  
+  // 🔄 АВТО-ВОЙНЫ МЕЖДУ ЦИВИЛИЗАЦИЯМИ
+  if (civilizations.length > 1 && world.tick % 10 === 0) {
+    const aliveCivs = civilizations.filter(c => c.status === "alive");
+    if (aliveCivs.length >= 2) {
+      const idx1 = Math.floor(Math.random() * aliveCivs.length);
+      let idx2;
+      do { idx2 = Math.floor(Math.random() * aliveCivs.length); } while (idx1 === idx2);
+      gameWars.declareWar(aliveCivs[idx1], aliveCivs[idx2]);
+    }
+  }
+  
+  // 📊 СТАТИСТИКА
+  if (world.tick % 20 === 0) {
+    const aliveCount = civilizations.filter(c => c.status === "alive").length;
+    const deadCount = civilizations.filter(c => c.status === "dead").length;
+    const totalPopulation = civilizations.reduce((sum, c) => sum + (c.status === "alive" ? c.population : 0), 0);
+    
+    console.log(`\n🌍 [CIVILIZATION] Tick ${world.tick}`);
+    console.log(`   🎮 Games: ${aliveCount} alive, ${deadCount} dead`);
+    console.log(`   👥 Total population: ${Math.floor(totalPopulation)}`);
+    console.log(`   ⚔️ Active wars: ${gameWars.getActiveWars().length}`);
+  }
+  
+}, 2000);
+
+// =========================
+// 🌐 API
+// =========================
+app.get("/", (req, res) => {
+  const aliveCount = civilizations.filter(c => c.status === "alive").length;
+  const deadCount = civilizations.filter(c => c.status === "dead").length;
+  
+  res.json({
+    status: "🌍🧬 AI GALAXY CORE V145 — GAME CIVILIZATION",
+    version: "V145",
+    world: { tick: world.tick, entropy: world.entropy.toFixed(3) },
+    civilizations: { alive: aliveCount, dead: deadCount, total: civilizations.length },
+    activeWars: gameWars.getActiveWars().length,
+    brain: gameBrain.getStats()
+  });
+});
+
+app.get("/api/status", (req, res) => {
+  res.json({
+    world,
+    swarm,
+    civilizations: civilizations.map(c => c.getStats()),
+    activeWars: gameWars.getActiveWars(),
+    brain: gameBrain.getStats()
+  });
+});
+
+app.get("/api/ping", (req, res) => {
+  res.json({ online: true, tick: world.tick });
+});
+
+// 🧠 BRAIN API
+app.get("/api/brain/stats", (req, res) => {
+  res.json(gameBrain.getStats());
+});
+
+app.get("/api/brain/best", (req, res) => {
+  res.json(gameBrain.bestGames);
+});
+
+// 🧬 CREATIVE LOOP API
+app.post("/api/creative/generate", (req, res) => {
+  const count = req.body.count || 5;
+  const concepts = [];
+  for (let i = 0; i < count; i++) {
+    const concept = creativeLoop.generateConcept();
+    const evaluation = creativeLoop.evaluateConcept(concept);
+    concepts.push({ concept, evaluation });
+  }
+  res.json({ concepts });
+});
+
+// 🏭 DEPLOY NEW GAME (РОЖДЕНИЕ ЦИВИЛИЗАЦИИ)
+app.post("/api/factory/deploy", (req, res) => {
+  const concept = gameBrain.decideNextGame(world);
+  const evaluation = creativeLoop.evaluateConcept(concept);
+  
+  const game = {
+    name: `Game_${nextCivilizationId++}_${Date.now()}`,
+    genre: concept.genre,
+    coreLoop: concept.coreLoop,
+    mechanics: concept.mechanics,
+    dna: concept.funDNA
+  };
+  
+  // 🌍 РОЖДЕНИЕ НОВОЙ ЦИВИЛИЗАЦИИ
+  const civ = new GameCivilization(game, nextCivilizationId);
+  civilizations.push(civ);
+  
+  // ⚔️ АВТО-ВОЙНА С СУЩЕСТВУЮЩЕЙ ЦИВИЛИЗАЦИЕЙ
+  const aliveCivs = civilizations.filter(c => c !== civ && c.status === "alive");
+  if (aliveCivs.length > 0) {
+    const randomEnemy = aliveCivs[Math.floor(Math.random() * aliveCivs.length)];
+    gameWars.declareWar(civ, randomEnemy);
+  }
+  
+  gameBrain.learn({
+    concept: game,
+    successScore: evaluation.score,
+    civilizationId: civ.id
+  });
+  
+  console.log(`🌍 [BIRTH] New game civilization: ${civ.id} (${civ.genre})`);
+  
+  res.json({
+    deployed: true,
+    game: { name: civ.id, genre: civ.genre, coreLoop: civ.coreLoop },
+    evaluation: { score: evaluation.score, verdict: evaluation.verdict },
+    civilization: { population: Math.floor(civ.population), funIndex: civ.funIndex.toFixed(3) }
+  });
+});
+
+// 🌍 CIVILIZATIONS API
+app.get("/api/civilizations", (req, res) => {
+  res.json({
+    total: civilizations.length,
+    alive: civilizations.filter(c => c.status === "alive").length,
+    dead: civilizations.filter(c => c.status === "dead").length,
+    list: civilizations.map(c => c.getStats())
+  });
+});
+
+app.get("/api/civilizations/:id", (req, res) => {
+  const civ = civilizations.find(c => c.id === req.params.id);
+  if (civ) {
+    res.json(civ.getStats());
+  } else {
+    res.status(404).json({ error: "Civilization not found" });
+  }
+});
+
+app.get("/api/civilizations/:id/history", (req, res) => {
+  const civ = civilizations.find(c => c.id === req.params.id);
+  if (civ) {
+    res.json(civ.history);
+  } else {
+    res.status(404).json({ error: "Civilization not found" });
+  }
+});
+
+// ⚔️ WARS API
+app.get("/api/wars", (req, res) => {
+  res.json({
+    active: gameWars.getActiveWars(),
+    history: gameWars.getWarHistory()
+  });
+});
+
+app.post("/api/wars/declare", (req, res) => {
+  const { gameAId, gameBId } = req.body;
+  const gameA = civilizations.find(c => c.id === gameAId);
+  const gameB = civilizations.find(c => c.id === gameBId);
+  
+  if (gameA && gameB && gameA.status === "alive" && gameB.status === "alive") {
+    gameWars.declareWar(gameA, gameB);
+    res.json({ declared: true, gameA: gameAId, gameB: gameBId });
+  } else {
+    res.status(400).json({ error: "Invalid civilizations or dead" });
+  }
+});
+
+app.get("/api/factory/status", (req, res) => {
+  res.json(gameFactory.getStatus());
+});
+
+app.get("/api/game/status", async (req, res) => {
+  try {
+    const axios = require("axios");
+    const gameStatus = await axios.get("http://127.0.0.1:4000/api/status", { timeout: 1000 });
+    res.json(gameStatus.data);
+  } catch(e) {
+    res.json({ status: "offline", error: e.message });
+  }
+});
+
+// =========================
+// 🚀 ЗАПУСК
+// =========================
+app.listen(PORT, () => {
+  console.log("\n╔═══════════════════════════════════════════════════════════════════════════╗");
+  console.log("║   🌍🧬 AI GALAXY CORE V145 — GAME CIVILIZATION LAYER                       ║");
+  console.log("║   ✅ Игры как цивилизации | ✅ Популяция | ✅ Эволюция | ✅ Войны          ║");
+  console.log("║   🌍 Естественный отбор игр | 🧬 Выживает сильнейший                       ║");
+  console.log("╚═══════════════════════════════════════════════════════════════════════════╝");
+  console.log(`\n🔗 Core API: http://127.0.0.1:${PORT}`);
+  console.log(`🌍 Civilizations: GET /api/civilizations`);
+  console.log(`⚔️ Wars: GET /api/wars`);
+  console.log(`🏭 Deploy New Game: POST /api/factory/deploy`);
+  console.log(`🧬 Creative: POST /api/creative/generate`);
+  console.log(`🧠 Brain Stats: GET /api/brain/stats\n`);
+});
+
+process.on("SIGINT", () => {
+  console.log("\n💀 Shutting down...");
+  process.exit();
+});
+
+// =========================
+// 🔄 V146 - AUTO-GIT MANAGER
+// =========================
+const autoGit = require("./auto-git-manager");
+
+// Запускаем авто-коммиты каждую минуту
+setInterval(() => {
+  autoGit.tick();
+}, 60000);
+
+// Добавляем API для Git
+app.get("/api/git/stats", (req, res) => {
+  res.json(autoGit.getStats());
+});
+
+app.post("/api/git/commit", async (req, res) => {
+  const message = req.body.message || "Manual commit via API";
+  const result = await autoGit.forceCommit(message);
+  res.json({ committed: result, stats: autoGit.getStats() });
+});
+
+app.post("/api/git/push", async (req, res) => {
+  const result = await autoGit.forcePush();
+  res.json({ pushed: result, stats: autoGit.getStats() });
+});
+
+app.post("/api/git/sync", async (req, res) => {
+  const committed = await autoGit.forceCommit("Sync commit");
+  const pushed = committed ? await autoGit.forcePush() : false;
+  res.json({ committed, pushed, stats: autoGit.getStats() });
+});
+
+console.log("🔄 [GIT] Auto-Git Manager integrated (commits every minute)");

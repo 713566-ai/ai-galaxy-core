@@ -1,0 +1,20 @@
+{
+  "name": "Galaxy Universe Online",
+  "version": "1.0.0",
+  "description": "Мультивселенная стратегия с живыми богами",
+  "author": "AI Galaxy Core",
+  "license": "MIT",
+  "categories": [
+    "Game",
+    "Strategy",
+    "Multiplayer"
+  ],
+  "platforms": [
+    "Web",
+    "Windows",
+    "Mac",
+    "Linux",
+    "Android",
+    "iOS"
+  ]
+}

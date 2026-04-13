@@ -1,0 +1,1 @@
+0 0 * * * cd /data/data/com.termux/files/home/ai-galaxy-core && tar -czf backups/galaxy-backup-$(date +\%Y\%m\%d).tar.gz game-build/

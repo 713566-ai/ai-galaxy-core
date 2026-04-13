@@ -1,0 +1,888 @@
+{
+  "endpoints": {
+    "/": {
+      "path": "/",
+      "status": 200,
+      "time": 21,
+      "ok": true,
+      "json": {
+        "status": "AI GALAXY CORE V121 CLEAN",
+        "tick": 240,
+        "entropy": 0.5386065385419769,
+        "uptime": 241.379689335,
+        "time": "2026-04-13T10:55:55.344Z"
+      }
+    },
+    "/api/status": {
+      "path": "/api/status",
+      "status": 200,
+      "time": 5,
+      "ok": true,
+      "json": {
+        "status": "AI GALAXY CORE V121 CLEAN",
+        "tick": 240,
+        "entropy": 0.5386065385419769,
+        "uptime": 241.391592773,
+        "time": "2026-04-13T10:55:55.356Z",
+        "system": "stable",
+        "mode": "clean-core-v117"
+      }
+    },
+    "/api/empires": {
+      "path": "/api/empires",
+      "status": 200,
+      "time": 3,
+      "ok": true,
+      "json": {
+        "tick": 0,
+        "empires": [
+          {
+            "id": "Aurora",
+            "power": 1.3809802436729504,
+            "stability": 1
+          },
+          {
+            "id": "Obsidian",
+            "power": 0.5815246345355126,
+            "stability": 1
+          },
+          {
+            "id": "emp_o9jjy",
+            "name": "Empire_0",
+            "power": 0.8666765301426858,
+            "stability": 1
+          }
+        ]
+      }
+    },
+    "/api/agents": {
+      "path": "/api/agents",
+      "status": 200,
+      "time": 3,
+      "ok": true,
+      "json": [
+        {
+          "id": "ag_boww",
+          "empire": "emp_o9jjy",
+          "energy": 0.358061625538725,
+          "loyalty": 0.1716022312270873,
+          "behavior": "cooperate"
+        },
+        {
+          "id": "ag_dt9y",
+          "empire": "Aurora",
+          "energy": 0.21095729952199357,
+          "loyalty": 0.0845593609385449,
+          "behavior": "cooperate"
+        },
+        {
+          "id": "ag_mhdk",
+          "empire": "emp_o9jjy",
+          "energy": 0.5011415512164255,
+          "loyalty": 0.569487094056476,
+          "behavior": "wander"
+        },
+        {
+          "id": "ag_s0dt",
+          "empire": "Obsidian",
+          "energy": 0.4868545583400301,
+          "loyalty": 0.6377261203200872,
+          "behavior": "cooperate"
+        },
+        {
+          "id": "ag_i6s2",
+          "empire": "Aurora",
+          "energy": 0.22150667850100736,
+          "loyalty": 0.43095683361262427,
+          "behavior": "cooperate"
+        },
+        {
+          "id": "ag_cx53o",
+          "empireId": "Aurora",
+          "energy": 0.19824507921192613
+        },
+        {
+          "id": "ag_d7o9u",
+          "empireId": "Aurora",
+          "energy": 0.10948804242841037
+        },
+        {
+          "id": "ag_dj660",
+          "empireId": "Obsidian",
+          "energy": 0.9142076846377896
+        },
+        {
+          "id": "ag_i5uqt",
+          "empireId": "Aurora",
+          "energy": 0.674953122185764
+        },
+        {
+          "id": "ag_kftr2",
+          "empireId": "emp_o9jjy",
+          "energy": 0.6859395768062035
+        },
+        {
+          "id": "ag_tm6np",
+          "empireId": "Obsidian",
+          "energy": 0.960333018381392
+        },
+        {
+          "id": "ag_5sscz",
+          "empireId": "emp_o9jjy",
+          "energy": 0.4063988155096969
+        },
+        {
+          "id": "ag_bnhm4",
+          "empireId": "emp_o9jjy",
+          "energy": 0.2590417995969596
+        },
+        {
+          "id": "ag_e62eq",
+          "empireId": "emp_o9jjy",
+          "energy": 0.9357248121708484
+        },
+        {
+          "id": "ag_fd3uo",
+          "empireId": "Obsidian",
+          "energy": 0.943737237706656
+        },
+        {
+          "id": "ag_px9gt",
+          "empireId": "Aurora",
+          "energy": 0.08895379913753021
+        },
+        {
+          "id": "ag_dasj5",
+          "empireId": "Obsidian",
+          "energy": 0.8329962067038132
+        },
+        {
+          "id": "ag_zc7w2",
+          "empireId": "emp_o9jjy",
+          "energy": 0.037851918177274624
+        },
+        {
+          "id": "ag_fj91a",
+          "empireId": "Obsidian",
+          "energy": 0.19561189249652955
+        },
+        {
+          "id": "ag_wbosv",
+          "empireId": "emp_o9jjy",
+          "energy": 0.26714046315606066
+        },
+        {
+          "id": "ag_f8ku6",
+          "empireId": "Obsidian",
+          "energy": 0.8513988957588166
+        },
+        {
+          "id": "ag_ty566",
+          "empireId": "Obsidian",
+          "energy": 0.7830429793295586
+        },
+        {
+          "id": "ag_ngs63",
+          "empireId": "Aurora",
+          "energy": 0.8014039332165468
+        },
+        {
+          "id": "ag_fei6s",
+          "empireId": "Obsidian",
+          "energy": 0.7072343366279867
+        },
+        {
+          "id": "ag_iq1lw",
+          "empireId": "Obsidian",
+          "energy": 0.840135156130854
+        },
+        {
+          "id": "ag_xl8wf",
+          "empireId": "emp_o9jjy",
+          "energy": 0.32953294762320373
+        },
+        {
+          "id": "ag_arej0",
+          "empireId": "Aurora",
+          "energy": 0.8086175395466936
+        },
+        {
+          "id": "ag_tlgxf",
+          "empireId": "Obsidian",
+          "energy": 0.05024885357877129
+        },
+        {
+          "id": "ag_aafso",
+          "empireId": "Obsidian",
+          "energy": 0.5092843629866989
+        },
+        {
+          "id": "ag_gaycc",
+          "empireId": "emp_o9jjy",
+          "energy": 0.8981567116407265
+        },
+        {
+          "id": "ag_d96k0",
+          "empireId": "Aurora",
+          "energy": 0.6508986851938326
+        },
+        {
+          "id": "ag_v70x0",
+          "empireId": "Obsidian",
+          "energy": 0.8712390869140075
+        },
+        {
+          "id": "ag_2vc3e",
+          "empireId": "Obsidian",
+          "energy": 0.3138747641745485
+        },
+        {
+          "id": "ag_c3yb9",
+          "empireId": "emp_o9jjy",
+          "energy": 0.28806367295376556
+        },
+        {
+          "id": "ag_1iz5l",
+          "empireId": "Aurora",
+          "energy": 0.41837864519713297
+        },
+        {
+          "id": "ag_jg4zw",
+          "empireId": "Obsidian",
+          "energy": 0.3437800233967826
+        },
+        {
+          "id": "ag_fvtgh",
+          "empireId": "emp_o9jjy",
+          "energy": 0.8157279183466107
+        },
+        {
+          "id": "ag_da39x",
+          "empireId": "Obsidian",
+          "energy": 0.597149826845775
+        },
+        {
+          "id": "ag_qeiq1",
+          "empireId": "emp_o9jjy",
+          "energy": 0.8496078720291443
+        },
+        {
+          "id": "ag_lsjmd",
+          "empireId": "Aurora",
+          "energy": 0.10028202155644006
+        },
+        {
+          "id": "ag_d184i",
+          "empireId": "emp_o9jjy",
+          "energy": 0.6000168064601747
+        },
+        {
+          "id": "ag_yr9ny",
+          "empireId": "Obsidian",
+          "energy": 0.39038713234721334
+        },
+        {
+          "id": "ag_ensob",
+          "empireId": "emp_o9jjy",
+          "energy": 0.6972332929257742
+        },
+        {
+          "id": "ag_svykv",
+          "empireId": "Obsidian",
+          "energy": 0.5726318954574582
+        },
+        {
+          "id": "ag_3mm4j",
+          "empireId": "Aurora",
+          "energy": 0.9673282955917561
+        },
+        {
+          "id": "ag_c8efk",
+          "empireId": "emp_o9jjy",
+          "energy": 0.8309754781828766
+        },
+        {
+          "id": "ag_537cn",
+          "empireId": "Aurora",
+          "energy": 0.0049610346097472835
+        },
+        {
+          "id": "ag_evzmd",
+          "empireId": "Aurora",
+          "energy": 0.1659009779458377
+        },
+        {
+          "id": "ag_2mrf5",
+          "empireId": "Obsidian",
+          "energy": 0.4370315657389585
+        },
+        {
+          "id": "ag_ek21q",
+          "empireId": "Obsidian",
+          "energy": 0.13582675771472363
+        },
+        {
+          "id": "ag_m4lgm",
+          "empireId": "Obsidian",
+          "energy": 0.3175666245122353
+        },
+        {
+          "id": "ag_bc0x8",
+          "empireId": "emp_o9jjy",
+          "energy": 0.0913781257796682
+        },
+        {
+          "id": "ag_gc8nd",
+          "empireId": "emp_o9jjy",
+          "energy": 0.21912709373633588
+        },
+        {
+          "id": "ag_e76vc",
+          "empireId": "Aurora",
+          "energy": 0.7729696691668247
+        },
+        {
+          "id": "ag_697xi",
+          "empireId": "Aurora",
+          "energy": 0.44520726895899176
+        },
+        {
+          "id": "ag_gessz",
+          "empireId": "emp_o9jjy",
+          "energy": 0.509644502977351
+        },
+        {
+          "id": "ag_kt5o1",
+          "empireId": "Obsidian",
+          "energy": 0.2018286797324541
+        },
+        {
+          "id": "ag_mis40",
+          "empireId": "emp_o9jjy",
+          "energy": 0.13626929153216005
+        },
+        {
+          "id": "ag_0tj9y",
+          "empireId": "Obsidian",
+          "energy": 0.11730338021261932
+        },
+        {
+          "id": "ag_fjlzd",
+          "empireId": "Aurora",
+          "energy": 0.1439674409461129
+        },
+        {
+          "id": "ag_1nd5a",
+          "empireId": "emp_o9jjy",
+          "energy": 0.24787929052854474
+        },
+        {
+          "id": "ag_dxxip",
+          "empireId": "Aurora",
+          "energy": 0.18655829478044517
+        },
+        {
+          "id": "ag_fw2sg",
+          "empireId": "Obsidian",
+          "energy": 0.39915457261822285
+        },
+        {
+          "id": "ag_260g8",
+          "empireId": "emp_o9jjy",
+          "energy": 0.8946890661545285
+        },
+        {
+          "id": "ag_d0cxy",
+          "empireId": "Obsidian",
+          "energy": 0.46821660640484886
+        },
+        {
+          "id": "ag_59kca",
+          "empireId": "Aurora",
+          "energy": 0.11251546618686192
+        },
+        {
+          "id": "ag_dt3ia",
+          "empireId": "Obsidian",
+          "energy": 0.590718021165453
+        },
+        {
+          "id": "ag_fjxqn",
+          "empireId": "emp_o9jjy",
+          "energy": 0.6092201300718747
+        },
+        {
+          "id": "ag_vt2gv",
+          "empireId": "Obsidian",
+          "energy": 0.9117044427765798
+        },
+        {
+          "id": "ag_3etzx",
+          "empireId": "emp_o9jjy",
+          "energy": 0.6180916528733392
+        },
+        {
+          "id": "ag_qxaxm",
+          "empireId": "Aurora",
+          "energy": 0.11644190920896202
+        },
+        {
+          "id": "ag_9bnf1",
+          "empireId": "emp_o9jjy",
+          "energy": 0.05289368569873132
+        },
+        {
+          "id": "ag_ag487",
+          "empireId": "Aurora",
+          "energy": 0.41722763023873577
+        },
+        {
+          "id": "ag_asilu",
+          "empireId": "emp_o9jjy",
+          "energy": 0.9021278190482144
+        },
+        {
+          "id": "ag_lhaae",
+          "empireId": "emp_o9jjy",
+          "energy": 0.1937708325617925
+        },
+        {
+          "id": "ag_0iv41",
+          "empireId": "emp_o9jjy",
+          "energy": 0.5630222824134936
+        },
+        {
+          "id": "ag_ascno",
+          "empireId": "Obsidian",
+          "energy": 0.862293193414829
+        },
+        {
+          "id": "ag_d0qys",
+          "empireId": "emp_o9jjy",
+          "energy": 0.14140157185080304
+        },
+        {
+          "id": "ag_8xw4g",
+          "empireId": "Aurora",
+          "energy": 0.7817305320994615
+        },
+        {
+          "id": "ag_cfbk5",
+          "empireId": "Obsidian",
+          "energy": 0.9029851823207647
+        },
+        {
+          "id": "ag_yoinu",
+          "empireId": "emp_o9jjy",
+          "energy": 0.2757175650267536
+        },
+        {
+          "id": "ag_jw4et",
+          "empireId": "Obsidian",
+          "energy": 0.5416938235663843
+        },
+        {
+          "id": "ag_44swn",
+          "empireId": "Aurora",
+          "energy": 0.27322404043472537
+        },
+        {
+          "id": "ag_nl86a",
+          "empireId": "Aurora",
+          "energy": 0.22295960571657814
+        },
+        {
+          "id": "ag_awt1z",
+          "empireId": "Aurora",
+          "energy": 0.4483455580594591
+        },
+        {
+          "id": "ag_eq9k7",
+          "empireId": "Obsidian",
+          "energy": 0.10161034391469415
+        },
+        {
+          "id": "ag_7z46p",
+          "empireId": "emp_o9jjy",
+          "energy": 0.7129783036934232
+        },
+        {
+          "id": "ag_e03og",
+          "empireId": "Aurora",
+          "energy": 0.5640566316035317
+        },
+        {
+          "id": "ag_f47of",
+          "empireId": "emp_o9jjy",
+          "energy": 0.6906422192123952
+        },
+        {
+          "id": "ag_v31iz",
+          "empireId": "Aurora",
+          "energy": 0.7719792412536314
+        },
+        {
+          "id": "ag_9lz18",
+          "empireId": "Obsidian",
+          "energy": 0.2337544479326067
+        },
+        {
+          "id": "ag_vykx3",
+          "empireId": "Aurora",
+          "energy": 0.6843164345781805
+        },
+        {
+          "id": "ag_196xe",
+          "empireId": "Obsidian",
+          "energy": 0.7906800402769508
+        },
+        {
+          "id": "ag_ux1v7",
+          "empireId": "Aurora",
+          "energy": 0.11399494515765318
+        },
+        {
+          "id": "ag_qej7q",
+          "empireId": "Obsidian",
+          "energy": 0.6866982211197485
+        },
+        {
+          "id": "ag_d583p",
+          "empireId": "Obsidian",
+          "energy": 0.4287659102882714
+        },
+        {
+          "id": "ag_pz6gq",
+          "empireId": "emp_o9jjy",
+          "energy": 0.06937833464122789
+        },
+        {
+          "id": "ag_9pzyy",
+          "empireId": "Aurora",
+          "energy": 0.6141460891315987
+        },
+        {
+          "id": "ag_9pufk",
+          "empireId": "Aurora",
+          "energy": 0.41017592683918214
+        },
+        {
+          "id": "ag_b5ic1",
+          "empireId": "Aurora",
+          "energy": 0.6268601024420677
+        },
+        {
+          "id": "ag_sbv5k",
+          "empireId": "Obsidian",
+          "energy": 0.06670891158719572
+        },
+        {
+          "id": "ag_2v2wm",
+          "empireId": "Aurora",
+          "energy": 0.5783371553858505
+        },
+        {
+          "id": "ag_y55n1",
+          "empireId": "Aurora",
+          "energy": 0.5966072535551256
+        },
+        {
+          "id": "ag_vywy2",
+          "empireId": "Obsidian",
+          "energy": 0.5132436147791455
+        },
+        {
+          "id": "ag_bzpzt",
+          "empireId": "emp_o9jjy",
+          "energy": 0.5779365012710969
+        },
+        {
+          "id": "ag_142pk",
+          "empireId": "Aurora",
+          "energy": 0.5071799371421783
+        },
+        {
+          "id": "ag_6uq3x",
+          "empireId": "Obsidian",
+          "energy": 0.9818677789771483
+        },
+        {
+          "id": "ag_zk6q0",
+          "empireId": "Obsidian",
+          "energy": 0.8603452445562768
+        },
+        {
+          "id": "ag_uqrop",
+          "empireId": "Obsidian",
+          "energy": 0.9259065572467378
+        },
+        {
+          "id": "ag_nxrqq",
+          "empireId": "emp_o9jjy",
+          "energy": 0.49013374738137916
+        },
+        {
+          "id": "ag_ur2wx",
+          "empireId": "Obsidian",
+          "energy": 0.9495620930434038
+        },
+        {
+          "id": "ag_mhgvb",
+          "empireId": "emp_o9jjy",
+          "energy": 0.5886539325166845
+        },
+        {
+          "id": "ag_4a11m",
+          "empireId": "Obsidian",
+          "energy": 0.3937751483769929
+        },
+        {
+          "id": "ag_2jbce",
+          "empireId": "Aurora",
+          "energy": 0.336758174250507
+        },
+        {
+          "id": "ag_0606m",
+          "empireId": "Obsidian",
+          "energy": 0.15983987240405817
+        },
+        {
+          "id": "ag_lmbx2",
+          "empireId": "emp_o9jjy",
+          "energy": 0.2595863103757591
+        },
+        {
+          "id": "ag_s238d",
+          "empireId": "Aurora",
+          "energy": 0.014053088276304249
+        },
+        {
+          "id": "ag_u4d1j",
+          "empireId": "Obsidian",
+          "energy": 0.41212888427682715
+        },
+        {
+          "id": "ag_6pon6",
+          "empireId": "emp_o9jjy",
+          "energy": 0.7535002070849725
+        },
+        {
+          "id": "ag_7496c",
+          "empireId": "Obsidian",
+          "energy": 0.1258744001828982
+        },
+        {
+          "id": "ag_d41dy",
+          "empireId": "Obsidian",
+          "energy": 0.9265442673935009
+        },
+        {
+          "id": "ag_ikg1d",
+          "empireId": "emp_o9jjy",
+          "energy": 0.9357164398741302
+        },
+        {
+          "id": "ag_p4551",
+          "empireId": "Obsidian",
+          "energy": 0.19355256709421786
+        },
+        {
+          "id": "ag_61m89",
+          "empireId": "emp_o9jjy",
+          "energy": 0.7177010473229751
+        },
+        {
+          "id": "ag_wsptm",
+          "empireId": "Aurora",
+          "energy": 0.1356907817940095
+        },
+        {
+          "id": "ag_icekn",
+          "empireId": "Obsidian",
+          "energy": 0.13812525900953854
+        },
+        {
+          "id": "ag_89qcc",
+          "empireId": "Obsidian",
+          "energy": 0.8283867701636664
+        },
+        {
+          "id": "ag_oo9h6",
+          "empireId": "Aurora",
+          "energy": 0.21280547590860321
+        },
+        {
+          "id": "ag_urd05",
+          "empireId": "emp_o9jjy",
+          "energy": 0.43110209939966104
+        },
+        {
+          "id": "ag_jles5",
+          "empireId": "Aurora",
+          "energy": 0.3946209893663759
+        },
+        {
+          "id": "ag_e2knt",
+          "empireId": "Obsidian",
+          "energy": 0.881904768599016
+        },
+        {
+          "id": "ag_oesxv",
+          "empireId": "Aurora",
+          "energy": 0.7700038467591171
+        },
+        {
+          "id": "ag_r1m8w",
+          "empireId": "Aurora",
+          "energy": 0.713695703413754
+        },
+        {
+          "id": "ag_lkae3",
+          "empireId": "emp_o9jjy",
+          "energy": 0.5045276909737011
+        },
+        {
+          "id": "ag_g7xp5",
+          "empireId": "Aurora",
+          "energy": 0.8327855697029655
+        },
+        {
+          "id": "ag_8sq7u",
+          "empireId": "emp_o9jjy",
+          "energy": 0.06838383319736263
+        },
+        {
+          "id": "ag_808gu",
+          "empireId": "emp_o9jjy",
+          "energy": 0.5242852652798918
+        },
+        {
+          "id": "ag_dllv9",
+          "empireId": "Obsidian",
+          "energy": 0.5564644243944017
+        },
+        {
+          "id": "ag_65kct",
+          "empireId": "Aurora",
+          "energy": 0.49909609393614995
+        },
+        {
+          "id": "ag_86kv3",
+          "empireId": "emp_o9jjy",
+          "energy": 0.4282187625340407
+        },
+        {
+          "id": "ag_g30e2",
+          "empireId": "Aurora",
+          "energy": 0.23884193804713316
+        },
+        {
+          "id": "ag_urkvi",
+          "empireId": "emp_o9jjy",
+          "energy": 0.05536673349479404
+        },
+        {
+          "id": "ag_rgt2u",
+          "empireId": "Aurora",
+          "energy": 0.0975429758922608
+        },
+        {
+          "id": "ag_7f0y8",
+          "empireId": "emp_o9jjy",
+          "energy": 0.4649913743825047
+        },
+        {
+          "id": "ag_4brar",
+          "empireId": "emp_o9jjy",
+          "energy": 0.045249489048871716
+        },
+        {
+          "id": "ag_miqh4",
+          "empireId": "emp_o9jjy",
+          "energy": 0.8021537421073577
+        },
+        {
+          "id": "ag_mb19g",
+          "empireId": "Obsidian",
+          "energy": 0.32879088239716137
+        },
+        {
+          "id": "ag_o4svt",
+          "empireId": "emp_o9jjy",
+          "energy": 0.7150225759994354
+        },
+        {
+          "id": "ag_a5lod",
+          "empireId": "Aurora",
+          "energy": 0.8305328600432184
+        },
+        {
+          "id": "ag_a8jh0",
+          "empireId": "emp_o9jjy",
+          "energy": 0.981324987384412
+        },
+        {
+          "id": "ag_3xlly",
+          "empireId": "Aurora",
+          "energy": 0.9923161211141681
+        },
+        {
+          "id": "ag_6cuyo",
+          "empireId": "Aurora",
+          "energy": 0.6427336337410141
+        },
+        {
+          "id": "ag_dc25y",
+          "empireId": "Aurora",
+          "energy": 0.4411748673548551
+        },
+        {
+          "id": "ag_s83sp",
+          "empireId": "Obsidian",
+          "energy": 0.34021073676554303
+        },
+        {
+          "id": "ag_056e1",
+          "empireId": "Aurora",
+          "energy": 0.9797723244850196
+        },
+        {
+          "id": "ag_1cwmd",
+          "empireId": "Obsidian",
+          "energy": 0.3929007524942705
+        },
+        {
+          "id": "ag_mrlfb",
+          "empireId": "Aurora",
+          "energy": 0.7396966427959137
+        },
+        {
+          "id": "ag_722pi",
+          "empireId": "emp_o9jjy",
+          "energy": 0.6807806021692461
+        },
+        {
+          "id": "ag_6652m",
+          "empireId": "Obsidian",
+          "energy": 0.6652965079377408
+        }
+      ]
+    },
+    "/api/health": {
+      "path": "/api/health",
+      "status": 200,
+      "time": 3,
+      "ok": true,
+      "json": {
+        "status": "OK",
+        "version": "V121_STABLE",
+        "tick": 0,
+        "entropy": 0.5,
+        "empires": 3,
+        "agents": 159,
+        "uptime": 241.404386054
+      }
+    }
+  },
+  "system": {}
+}

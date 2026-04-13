@@ -1,0 +1,1529 @@
+{
+  "tick": 100,
+  "world": {
+    "entropy": 0.45302108857758877,
+    "entities": 491,
+    "wars": 41,
+    "alliances": 0
+  },
+  "policy": {
+    "mutationRate": 0.2,
+    "selectionPressure": 0.6,
+    "explorationBias": 0.5
+  },
+  "reward": {
+    "total": 36.46462498630166,
+    "last": 0.48,
+    "smoothed": 0.506305052170912,
+    "history": [
+      {
+        "tick": 1,
+        "reward": 0.10666666666666667
+      },
+      {
+        "tick": 2,
+        "reward": 0.2945132018410355
+      },
+      {
+        "tick": 3,
+        "reward": 0.08267967393033082
+      },
+      {
+        "tick": 4,
+        "reward": -0.12666666666666665
+      },
+      {
+        "tick": 5,
+        "reward": -0.12666666666666665
+      },
+      {
+        "tick": 6,
+        "reward": -0.12666666666666665
+      },
+      {
+        "tick": 7,
+        "reward": -0.12666666666666665
+      },
+      {
+        "tick": 8,
+        "reward": 0.35809964212360196
+      },
+      {
+        "tick": 9,
+        "reward": 0.14770404079391455
+      },
+      {
+        "tick": 10,
+        "reward": 0.15592313661428006
+      },
+      {
+        "tick": 11,
+        "reward": 0.38067801672312357
+      },
+      {
+        "tick": 12,
+        "reward": 0.28849122022009493
+      },
+      {
+        "tick": 13,
+        "reward": 0.17238453822824254
+      },
+      {
+        "tick": 14,
+        "reward": 0.38977359309108817
+      },
+      {
+        "tick": 15,
+        "reward": 0.19712295844518898
+      },
+      {
+        "tick": 16,
+        "reward": 0.424341124164056
+      },
+      {
+        "tick": 17,
+        "reward": 0.2237521235662352
+      },
+      {
+        "tick": 18,
+        "reward": 0.2320174799365243
+      },
+      {
+        "tick": 19,
+        "reward": 0.44844679906177176
+      },
+      {
+        "tick": 20,
+        "reward": 0.3418481700978974
+      },
+      {
+        "tick": 21,
+        "reward": 0.46693377356329563
+      },
+      {
+        "tick": 22,
+        "reward": 0.35735764558086797
+      },
+      {
+        "tick": 23,
+        "reward": 0.27343020754109687
+      },
+      {
+        "tick": 24,
+        "reward": 0.2817298610964924
+      },
+      {
+        "tick": 25,
+        "reward": 0.2900351876285749
+      },
+      {
+        "tick": 26,
+        "reward": 0.5069060083232566
+      },
+      {
+        "tick": 27,
+        "reward": 0.3066628035934104
+      },
+      {
+        "tick": 28,
+        "reward": 0.4437943184986854
+      },
+      {
+        "tick": 29,
+        "reward": 0.31666666666666665
+      },
+      {
+        "tick": 30,
+        "reward": 0.5277815745270162
+      },
+      {
+        "tick": 31,
+        "reward": 0.31666666666666665
+      },
+      {
+        "tick": 32,
+        "reward": 0.3892136119663343
+      },
+      {
+        "tick": 33,
+        "reward": 0.31666666666666665
+      },
+      {
+        "tick": 34,
+        "reward": 0.5285075398411981
+      },
+      {
+        "tick": 35,
+        "reward": 0.31666666666666665
+      },
+      {
+        "tick": 36,
+        "reward": 0.5331986133755827
+      },
+      {
+        "tick": 37,
+        "reward": 0.31666666666666665
+      },
+      {
+        "tick": 38,
+        "reward": 0.31666666666666665
+      },
+      {
+        "tick": 39,
+        "reward": 0.31666666666666665
+      },
+      {
+        "tick": 40,
+        "reward": 0.39527836950205697
+      },
+      {
+        "tick": 41,
+        "reward": 0.31666666666666665
+      },
+      {
+        "tick": 42,
+        "reward": 0.31666666666666665
+      },
+      {
+        "tick": 43,
+        "reward": 0.31666666666666665
+      },
+      {
+        "tick": 44,
+        "reward": 0.31666666666666665
+      },
+      {
+        "tick": 45,
+        "reward": 0.31666666666666665
+      },
+      {
+        "tick": 46,
+        "reward": 0.31666666666666665
+      },
+      {
+        "tick": 47,
+        "reward": 0.31666666666666665
+      },
+      {
+        "tick": 48,
+        "reward": 0.5263695561536679
+      },
+      {
+        "tick": 49,
+        "reward": 0.31666666666666665
+      },
+      {
+        "tick": 50,
+        "reward": 0.31666666666666665
+      },
+      {
+        "tick": 51,
+        "reward": 0.31666666666666665
+      },
+      {
+        "tick": 52,
+        "reward": 0.4412215128116624
+      },
+      {
+        "tick": 53,
+        "reward": 0.3846129009973132
+      },
+      {
+        "tick": 54,
+        "reward": 0.31666666666666665
+      },
+      {
+        "tick": 55,
+        "reward": 0.31666666666666665
+      },
+      {
+        "tick": 56,
+        "reward": 0.31666666666666665
+      },
+      {
+        "tick": 57,
+        "reward": 0.5283159113331775
+      },
+      {
+        "tick": 58,
+        "reward": 0.31666666666666665
+      },
+      {
+        "tick": 59,
+        "reward": 0.5282946480949501
+      },
+      {
+        "tick": 60,
+        "reward": 0.31666666666666665
+      },
+      {
+        "tick": 61,
+        "reward": 0.31666666666666665
+      },
+      {
+        "tick": 62,
+        "reward": 0.31666666666666665
+      },
+      {
+        "tick": 63,
+        "reward": 0.31666666666666665
+      },
+      {
+        "tick": 64,
+        "reward": 0.4926488992264925
+      },
+      {
+        "tick": 65,
+        "reward": 0.31666666666666665
+      },
+      {
+        "tick": 66,
+        "reward": 0.31666666666666665
+      },
+      {
+        "tick": 67,
+        "reward": 0.31666666666666665
+      },
+      {
+        "tick": 68,
+        "reward": 0.5292306644164079
+      },
+      {
+        "tick": 69,
+        "reward": 0.48626833396550734
+      },
+      {
+        "tick": 70,
+        "reward": 0.32520464668962945
+      },
+      {
+        "tick": 71,
+        "reward": 0.5098038290728437
+      },
+      {
+        "tick": 72,
+        "reward": 0.3422940100402807
+      },
+      {
+        "tick": 73,
+        "reward": 0.5645399027898209
+      },
+      {
+        "tick": 74,
+        "reward": 0.5740192663772156
+      },
+      {
+        "tick": 75,
+        "reward": 0.36796099300113266
+      },
+      {
+        "tick": 76,
+        "reward": 0.3765252822778129
+      },
+      {
+        "tick": 77,
+        "reward": 0.5505782662564292
+      },
+      {
+        "tick": 78,
+        "reward": 0.39366656534332667
+      },
+      {
+        "tick": 79,
+        "reward": 0.4431081727232959
+      },
+      {
+        "tick": 80,
+        "reward": 0.3947325359797926
+      },
+      {
+        "tick": 81,
+        "reward": 0.4451351362189911
+      },
+      {
+        "tick": 82,
+        "reward": 0.22999999999999998
+      },
+      {
+        "tick": 83,
+        "reward": 0.22999999999999998
+      },
+      {
+        "tick": 84,
+        "reward": 0.22999999999999998
+      },
+      {
+        "tick": 85,
+        "reward": 0.22999999999999998
+      },
+      {
+        "tick": 86,
+        "reward": 0.44374782624403997
+      },
+      {
+        "tick": 87,
+        "reward": 0.47100380157000304
+      },
+      {
+        "tick": 88,
+        "reward": 0.6957007028112606
+      },
+      {
+        "tick": 89,
+        "reward": 0.6892124782560369
+      },
+      {
+        "tick": 90,
+        "reward": 0.6942692168335469
+      },
+      {
+        "tick": 91,
+        "reward": 0.48
+      },
+      {
+        "tick": 92,
+        "reward": 0.48
+      },
+      {
+        "tick": 93,
+        "reward": 0.48
+      },
+      {
+        "tick": 94,
+        "reward": 0.48
+      },
+      {
+        "tick": 95,
+        "reward": 0.6918843118821854
+      },
+      {
+        "tick": 96,
+        "reward": 0.48
+      },
+      {
+        "tick": 97,
+        "reward": 0.6000651180772062
+      },
+      {
+        "tick": 98,
+        "reward": 0.6895095142917546
+      },
+      {
+        "tick": 99,
+        "reward": 0.5794290820239736
+      },
+      {
+        "tick": 100,
+        "reward": 0.48
+      }
+    ]
+  },
+  "agents": [
+    {
+      "name": "codey",
+      "fitness": 0.95,
+      "personality": {
+        "aggression": 0.9,
+        "curiosity": 0.7,
+        "risk": 0.8,
+        "stability": 0.3
+      },
+      "stats": {
+        "wins": 17,
+        "warsFought": 29,
+        "warsWon": 17,
+        "actions": {
+          "expand": 0,
+          "diplomacy": 6,
+          "monitor": 0,
+          "prepare_war": 94
+        }
+      },
+      "warHistory": [
+        {
+          "tick": 57,
+          "role": "defender",
+          "outcome": "loss",
+          "intensity": 0.9247386699976641,
+          "opponent": "uiax"
+        },
+        {
+          "tick": 59,
+          "role": "attacker",
+          "outcome": "win",
+          "intensity": 0.9244197214242523,
+          "opponent": "uiax"
+        },
+        {
+          "tick": 64,
+          "role": "attacker",
+          "outcome": "loss",
+          "intensity": 1.0435904651144723,
+          "opponent": "garlic"
+        },
+        {
+          "tick": 68,
+          "role": "defender",
+          "outcome": "loss",
+          "intensity": 0.938459966246121,
+          "opponent": "uiax"
+        },
+        {
+          "tick": 69,
+          "role": "attacker",
+          "outcome": "win",
+          "intensity": 1.0504267850369564,
+          "opponent": "garlic"
+        },
+        {
+          "tick": 71,
+          "role": "defender",
+          "outcome": "loss",
+          "intensity": 1.0435106549296511,
+          "opponent": "uiax"
+        },
+        {
+          "tick": 73,
+          "role": "attacker",
+          "outcome": "win",
+          "intensity": 0.9554187753633538,
+          "opponent": "uiax"
+        },
+        {
+          "tick": 74,
+          "role": "attacker",
+          "outcome": "win",
+          "intensity": 0.969274119867992,
+          "opponent": "uiax"
+        },
+        {
+          "tick": 77,
+          "role": "attacker",
+          "outcome": "win",
+          "intensity": 1.0548380930689623,
+          "opponent": "uiax"
+        },
+        {
+          "tick": 79,
+          "role": "defender",
+          "outcome": "loss",
+          "intensity": 0.9466225908494391,
+          "opponent": "uiax"
+        },
+        {
+          "tick": 80,
+          "role": "attacker",
+          "outcome": "win",
+          "intensity": 1.0556437114502222,
+          "opponent": "uiax"
+        },
+        {
+          "tick": 81,
+          "role": "attacker",
+          "outcome": "loss",
+          "intensity": 0.9770270432848669,
+          "opponent": "uiax"
+        },
+        {
+          "tick": 86,
+          "role": "defender",
+          "outcome": "loss",
+          "intensity": 0.9562173936606013,
+          "opponent": "garlic"
+        },
+        {
+          "tick": 88,
+          "role": "defender",
+          "outcome": "win",
+          "intensity": 0.9912656404198905,
+          "opponent": "uiax"
+        },
+        {
+          "tick": 89,
+          "role": "defender",
+          "outcome": "loss",
+          "intensity": 0.8881871738405546,
+          "opponent": "garlic"
+        },
+        {
+          "tick": 90,
+          "role": "defender",
+          "outcome": "win",
+          "intensity": 1.002568696249771,
+          "opponent": "garlic"
+        },
+        {
+          "tick": 95,
+          "role": "defender",
+          "outcome": "loss",
+          "intensity": 0.9282646782327806,
+          "opponent": "garlic"
+        },
+        {
+          "tick": 97,
+          "role": "attacker",
+          "outcome": "win",
+          "intensity": 1.1035016592029934,
+          "opponent": "uiax"
+        },
+        {
+          "tick": 98,
+          "role": "defender",
+          "outcome": "loss",
+          "intensity": 0.892642714376318,
+          "opponent": "garlic"
+        },
+        {
+          "tick": 99,
+          "role": "defender",
+          "outcome": "loss",
+          "intensity": 1.1256116978314568,
+          "opponent": "uiax"
+        }
+      ]
+    },
+    {
+      "name": "uiax",
+      "fitness": 0.95,
+      "personality": {
+        "aggression": 0.9,
+        "curiosity": 0.8,
+        "risk": 0.8,
+        "stability": 0.3
+      },
+      "stats": {
+        "wins": 13,
+        "warsFought": 31,
+        "warsWon": 13,
+        "actions": {
+          "expand": 0,
+          "diplomacy": 0,
+          "monitor": 0,
+          "prepare_war": 100
+        }
+      },
+      "warHistory": [
+        {
+          "tick": 57,
+          "role": "attacker",
+          "outcome": "win",
+          "intensity": 0.9247386699976641,
+          "opponent": "codey"
+        },
+        {
+          "tick": 59,
+          "role": "defender",
+          "outcome": "loss",
+          "intensity": 0.9244197214242523,
+          "opponent": "codey"
+        },
+        {
+          "tick": 64,
+          "role": "defender",
+          "outcome": "loss",
+          "intensity": 1.0435904651144723,
+          "opponent": "codey"
+        },
+        {
+          "tick": 68,
+          "role": "attacker",
+          "outcome": "win",
+          "intensity": 0.938459966246121,
+          "opponent": "garlic"
+        },
+        {
+          "tick": 69,
+          "role": "defender",
+          "outcome": "loss",
+          "intensity": 1.0504267850369564,
+          "opponent": "codey"
+        },
+        {
+          "tick": 71,
+          "role": "attacker",
+          "outcome": "win",
+          "intensity": 1.0435106549296511,
+          "opponent": "garlic"
+        },
+        {
+          "tick": 73,
+          "role": "defender",
+          "outcome": "loss",
+          "intensity": 0.9554187753633538,
+          "opponent": "codey"
+        },
+        {
+          "tick": 74,
+          "role": "defender",
+          "outcome": "loss",
+          "intensity": 0.969274119867992,
+          "opponent": "codey"
+        },
+        {
+          "tick": 77,
+          "role": "defender",
+          "outcome": "loss",
+          "intensity": 1.0548380930689623,
+          "opponent": "codey"
+        },
+        {
+          "tick": 79,
+          "role": "attacker",
+          "outcome": "win",
+          "intensity": 0.9466225908494391,
+          "opponent": "codey"
+        },
+        {
+          "tick": 80,
+          "role": "defender",
+          "outcome": "loss",
+          "intensity": 1.0556437114502222,
+          "opponent": "codey"
+        },
+        {
+          "tick": 81,
+          "role": "defender",
+          "outcome": "win",
+          "intensity": 0.9770270432848669,
+          "opponent": "codey"
+        },
+        {
+          "tick": 86,
+          "role": "defender",
+          "outcome": "loss",
+          "intensity": 0.9562173936606013,
+          "opponent": "garlic"
+        },
+        {
+          "tick": 88,
+          "role": "attacker",
+          "outcome": "loss",
+          "intensity": 0.9912656404198905,
+          "opponent": "codey"
+        },
+        {
+          "tick": 89,
+          "role": "defender",
+          "outcome": "loss",
+          "intensity": 0.8881871738405546,
+          "opponent": "garlic"
+        },
+        {
+          "tick": 90,
+          "role": "defender",
+          "outcome": "loss",
+          "intensity": 1.002568696249771,
+          "opponent": "garlic"
+        },
+        {
+          "tick": 95,
+          "role": "defender",
+          "outcome": "loss",
+          "intensity": 0.9282646782327806,
+          "opponent": "garlic"
+        },
+        {
+          "tick": 97,
+          "role": "defender",
+          "outcome": "loss",
+          "intensity": 1.1035016592029934,
+          "opponent": "codey"
+        },
+        {
+          "tick": 98,
+          "role": "defender",
+          "outcome": "win",
+          "intensity": 0.892642714376318,
+          "opponent": "garlic"
+        },
+        {
+          "tick": 99,
+          "role": "attacker",
+          "outcome": "win",
+          "intensity": 1.1256116978314568,
+          "opponent": "codey"
+        }
+      ]
+    },
+    {
+      "name": "garlic",
+      "fitness": 0.95,
+      "personality": {
+        "aggression": 0.9,
+        "curiosity": 0.3,
+        "risk": 0.8,
+        "stability": 0.3
+      },
+      "stats": {
+        "wins": 11,
+        "warsFought": 22,
+        "warsWon": 11,
+        "actions": {
+          "expand": 0,
+          "diplomacy": 9,
+          "monitor": 0,
+          "prepare_war": 91
+        }
+      },
+      "warHistory": [
+        {
+          "tick": 57,
+          "role": "defender",
+          "outcome": "loss",
+          "intensity": 0.9247386699976641,
+          "opponent": "uiax"
+        },
+        {
+          "tick": 59,
+          "role": "defender",
+          "outcome": "loss",
+          "intensity": 0.9244197214242523,
+          "opponent": "codey"
+        },
+        {
+          "tick": 64,
+          "role": "defender",
+          "outcome": "win",
+          "intensity": 1.0435904651144723,
+          "opponent": "codey"
+        },
+        {
+          "tick": 68,
+          "role": "defender",
+          "outcome": "loss",
+          "intensity": 0.938459966246121,
+          "opponent": "uiax"
+        },
+        {
+          "tick": 69,
+          "role": "defender",
+          "outcome": "loss",
+          "intensity": 1.0504267850369564,
+          "opponent": "codey"
+        },
+        {
+          "tick": 71,
+          "role": "defender",
+          "outcome": "loss",
+          "intensity": 1.0435106549296511,
+          "opponent": "uiax"
+        },
+        {
+          "tick": 73,
+          "role": "defender",
+          "outcome": "loss",
+          "intensity": 0.9554187753633538,
+          "opponent": "codey"
+        },
+        {
+          "tick": 74,
+          "role": "defender",
+          "outcome": "loss",
+          "intensity": 0.969274119867992,
+          "opponent": "codey"
+        },
+        {
+          "tick": 77,
+          "role": "defender",
+          "outcome": "loss",
+          "intensity": 1.0548380930689623,
+          "opponent": "codey"
+        },
+        {
+          "tick": 79,
+          "role": "defender",
+          "outcome": "loss",
+          "intensity": 0.9466225908494391,
+          "opponent": "uiax"
+        },
+        {
+          "tick": 80,
+          "role": "defender",
+          "outcome": "loss",
+          "intensity": 1.0556437114502222,
+          "opponent": "codey"
+        },
+        {
+          "tick": 81,
+          "role": "defender",
+          "outcome": "loss",
+          "intensity": 0.9770270432848669,
+          "opponent": "codey"
+        },
+        {
+          "tick": 86,
+          "role": "attacker",
+          "outcome": "win",
+          "intensity": 0.9562173936606013,
+          "opponent": "uiax"
+        },
+        {
+          "tick": 88,
+          "role": "defender",
+          "outcome": "loss",
+          "intensity": 0.9912656404198905,
+          "opponent": "uiax"
+        },
+        {
+          "tick": 89,
+          "role": "attacker",
+          "outcome": "win",
+          "intensity": 0.8881871738405546,
+          "opponent": "uiax"
+        },
+        {
+          "tick": 90,
+          "role": "attacker",
+          "outcome": "loss",
+          "intensity": 1.002568696249771,
+          "opponent": "codey"
+        },
+        {
+          "tick": 95,
+          "role": "attacker",
+          "outcome": "win",
+          "intensity": 0.9282646782327806,
+          "opponent": "codey"
+        },
+        {
+          "tick": 97,
+          "role": "defender",
+          "outcome": "loss",
+          "intensity": 1.1035016592029934,
+          "opponent": "codey"
+        },
+        {
+          "tick": 98,
+          "role": "attacker",
+          "outcome": "loss",
+          "intensity": 0.892642714376318,
+          "opponent": "uiax"
+        },
+        {
+          "tick": 99,
+          "role": "defender",
+          "outcome": "loss",
+          "intensity": 1.1256116978314568,
+          "opponent": "uiax"
+        }
+      ]
+    }
+  ],
+  "warHistory": [
+    {
+      "id": "war_2_1775992749573",
+      "tick": 2,
+      "attacker": "codey",
+      "defender": "uiax",
+      "attackerPower": "1.06",
+      "defenderPower": "1.15",
+      "intensity": 0.9176980276155343,
+      "participants": [
+        "codey",
+        "uiax"
+      ],
+      "winner": "uiax",
+      "defenderFitness": 0.453
+    },
+    {
+      "id": "war_3_1775992751578",
+      "tick": 3,
+      "attacker": "uiax",
+      "defender": "garlic",
+      "attackerPower": "1.20",
+      "defenderPower": "1.22",
+      "intensity": 0.8901951089549635,
+      "participants": [
+        "uiax",
+        "garlic"
+      ],
+      "winner": "garlic",
+      "defenderFitness": 0.3239071775146019
+    },
+    {
+      "id": "war_8_1775992761596",
+      "tick": 8,
+      "attacker": "uiax",
+      "defender": "codey",
+      "attackerPower": "1.25",
+      "defenderPower": "0.46",
+      "intensity": 0.9941332735175414,
+      "participants": [
+        "uiax",
+        "codey"
+      ],
+      "winner": "codey",
+      "defenderFitness": 0.1
+    },
+    {
+      "id": "war_11_1775992767600",
+      "tick": 11,
+      "attacker": "garlic",
+      "defender": "uiax",
+      "attackerPower": "1.15",
+      "defenderPower": "1.53",
+      "intensity": 0.9979496592369936,
+      "participants": [
+        "garlic",
+        "uiax"
+      ],
+      "winner": "uiax",
+      "defenderFitness": 0.95
+    },
+    {
+      "id": "war_12_1775992769604",
+      "tick": 12,
+      "attacker": "codey",
+      "defender": "garlic",
+      "attackerPower": "1.70",
+      "defenderPower": "1.85",
+      "intensity": 1.0989180205934599,
+      "participants": [
+        "codey",
+        "garlic"
+      ],
+      "winner": "garlic",
+      "defenderFitness": 0.95
+    },
+    {
+      "id": "war_14_1775992773608",
+      "tick": 14,
+      "attacker": "garlic",
+      "defender": "uiax",
+      "attackerPower": "1.15",
+      "defenderPower": "1.53",
+      "intensity": 0.8872015241947594,
+      "participants": [
+        "garlic",
+        "uiax"
+      ],
+      "winner": "garlic",
+      "defenderFitness": 0.95
+    },
+    {
+      "id": "war_16_1775992777613",
+      "tick": 16,
+      "attacker": "garlic",
+      "defender": "uiax",
+      "attackerPower": "1.15",
+      "defenderPower": "1.45",
+      "intensity": 1.0063816201096631,
+      "participants": [
+        "garlic",
+        "uiax"
+      ],
+      "winner": "garlic",
+      "defenderFitness": 0.95
+    },
+    {
+      "id": "war_19_1775992783622",
+      "tick": 19,
+      "attacker": "codey",
+      "defender": "uiax",
+      "attackerPower": "1.85",
+      "defenderPower": "1.33",
+      "intensity": 0.8723732781112381,
+      "participants": [
+        "codey",
+        "uiax"
+      ],
+      "winner": "uiax",
+      "defenderFitness": 0.95
+    },
+    {
+      "id": "war_20_1775992785625",
+      "tick": 20,
+      "attacker": "garlic",
+      "defender": "codey",
+      "attackerPower": "1.15",
+      "defenderPower": "1.24",
+      "intensity": 1.1321970479769945,
+      "participants": [
+        "garlic",
+        "codey"
+      ],
+      "winner": "codey",
+      "defenderFitness": 0.937881336094438
+    },
+    {
+      "id": "war_21_1775992787628",
+      "tick": 21,
+      "attacker": "garlic",
+      "defender": "uiax",
+      "attackerPower": "1.15",
+      "defenderPower": "1.25",
+      "intensity": 0.9012870236585923,
+      "participants": [
+        "garlic",
+        "uiax"
+      ],
+      "winner": "garlic",
+      "defenderFitness": 0.95
+    },
+    {
+      "id": "war_22_1775992789630",
+      "tick": 22,
+      "attacker": "garlic",
+      "defender": "uiax",
+      "attackerPower": "1.15",
+      "defenderPower": "1.25",
+      "intensity": 1.1333342085858196,
+      "participants": [
+        "garlic",
+        "uiax"
+      ],
+      "winner": "uiax",
+      "defenderFitness": 0.95
+    },
+    {
+      "id": "war_26_1775992797640",
+      "tick": 26,
+      "attacker": "uiax",
+      "defender": "codey",
+      "attackerPower": "1.77",
+      "defenderPower": "1.25",
+      "intensity": 0.87839752577675,
+      "participants": [
+        "uiax",
+        "codey"
+      ],
+      "winner": "codey",
+      "defenderFitness": 0.95
+    },
+    {
+      "id": "war_28_1775992801644",
+      "tick": 28,
+      "attacker": "codey",
+      "defender": "uiax",
+      "attackerPower": "1.85",
+      "defenderPower": "1.25",
+      "intensity": 1.094132941177993,
+      "participants": [
+        "codey",
+        "uiax"
+      ],
+      "winner": "codey",
+      "defenderFitness": 0.95
+    },
+    {
+      "id": "war_30_1775992805645",
+      "tick": 30,
+      "attacker": "uiax",
+      "defender": "codey",
+      "attackerPower": "1.85",
+      "defenderPower": "1.25",
+      "intensity": 0.9167236179052451,
+      "participants": [
+        "uiax",
+        "codey"
+      ],
+      "winner": "uiax",
+      "defenderFitness": 0.95
+    },
+    {
+      "id": "war_32_1775992809650",
+      "tick": 32,
+      "attacker": "codey",
+      "defender": "garlic",
+      "attackerPower": "1.85",
+      "defenderPower": "1.85",
+      "intensity": 1.1544139871789276,
+      "participants": [
+        "codey",
+        "garlic"
+      ],
+      "winner": "garlic",
+      "defenderFitness": 0.95
+    },
+    {
+      "id": "war_34_1775992813653",
+      "tick": 34,
+      "attacker": "garlic",
+      "defender": "codey",
+      "attackerPower": "1.15",
+      "defenderPower": "1.25",
+      "intensity": 0.9276130976179721,
+      "participants": [
+        "garlic",
+        "codey"
+      ],
+      "winner": "codey",
+      "defenderFitness": 0.95
+    },
+    {
+      "id": "war_36_1775992817660",
+      "tick": 36,
+      "attacker": "garlic",
+      "defender": "codey",
+      "attackerPower": "1.15",
+      "defenderPower": "1.25",
+      "intensity": 0.9979792006337412,
+      "participants": [
+        "garlic",
+        "codey"
+      ],
+      "winner": "codey",
+      "defenderFitness": 0.95
+    },
+    {
+      "id": "war_40_1775992825667",
+      "tick": 40,
+      "attacker": "codey",
+      "defender": "uiax",
+      "attackerPower": "1.85",
+      "defenderPower": "1.25",
+      "intensity": 1.1479160326763675,
+      "participants": [
+        "codey",
+        "uiax"
+      ],
+      "winner": "uiax",
+      "defenderFitness": 0.95
+    },
+    {
+      "id": "war_48_1775992841683",
+      "tick": 48,
+      "attacker": "uiax",
+      "defender": "codey",
+      "attackerPower": "1.85",
+      "defenderPower": "1.25",
+      "intensity": 0.8955433423050203,
+      "participants": [
+        "uiax",
+        "codey"
+      ],
+      "winner": "codey",
+      "defenderFitness": 0.95
+    },
+    {
+      "id": "war_52_1775992849686",
+      "tick": 52,
+      "attacker": "garlic",
+      "defender": "codey",
+      "attackerPower": "1.15",
+      "defenderPower": "1.25",
+      "intensity": 0.9183226921749343,
+      "participants": [
+        "garlic",
+        "codey"
+      ],
+      "winner": "codey",
+      "defenderFitness": 0.95
+    },
+    {
+      "id": "war_53_1775992851687",
+      "tick": 53,
+      "attacker": "uiax",
+      "defender": "garlic",
+      "attackerPower": "1.85",
+      "defenderPower": "1.85",
+      "intensity": 1.1593433203600214,
+      "participants": [
+        "uiax",
+        "garlic"
+      ],
+      "winner": "garlic",
+      "defenderFitness": 0.95
+    },
+    {
+      "id": "war_57_1775992859694",
+      "tick": 57,
+      "attacker": "uiax",
+      "defender": "codey",
+      "attackerPower": "1.85",
+      "defenderPower": "1.25",
+      "intensity": 0.9247386699976641,
+      "participants": [
+        "uiax",
+        "codey"
+      ],
+      "winner": "uiax",
+      "defenderFitness": 0.95
+    },
+    {
+      "id": "war_59_1775992863699",
+      "tick": 59,
+      "attacker": "codey",
+      "defender": "uiax",
+      "attackerPower": "1.85",
+      "defenderPower": "1.25",
+      "intensity": 0.9244197214242523,
+      "participants": [
+        "codey",
+        "uiax"
+      ],
+      "winner": "codey",
+      "defenderFitness": 0.95
+    },
+    {
+      "id": "war_64_1775992873708",
+      "tick": 64,
+      "attacker": "codey",
+      "defender": "garlic",
+      "attackerPower": "1.85",
+      "defenderPower": "1.85",
+      "intensity": 1.0435904651144723,
+      "participants": [
+        "codey",
+        "garlic"
+      ],
+      "winner": "garlic",
+      "defenderFitness": 0.95
+    },
+    {
+      "id": "war_68_1775992881716",
+      "tick": 68,
+      "attacker": "uiax",
+      "defender": "garlic",
+      "attackerPower": "1.85",
+      "defenderPower": "1.85",
+      "intensity": 0.938459966246121,
+      "participants": [
+        "uiax",
+        "garlic"
+      ],
+      "winner": "uiax",
+      "defenderFitness": 0.95
+    },
+    {
+      "id": "war_69_1775992883717",
+      "tick": 69,
+      "attacker": "codey",
+      "defender": "garlic",
+      "attackerPower": "1.85",
+      "defenderPower": "1.85",
+      "intensity": 1.0504267850369564,
+      "participants": [
+        "codey",
+        "garlic"
+      ],
+      "winner": "codey",
+      "defenderFitness": 0.95
+    },
+    {
+      "id": "war_71_1775992887720",
+      "tick": 71,
+      "attacker": "uiax",
+      "defender": "garlic",
+      "attackerPower": "1.85",
+      "defenderPower": "1.77",
+      "intensity": 1.0435106549296511,
+      "participants": [
+        "uiax",
+        "garlic"
+      ],
+      "winner": "uiax",
+      "defenderFitness": 0.95
+    },
+    {
+      "id": "war_73_1775992891723",
+      "tick": 73,
+      "attacker": "codey",
+      "defender": "uiax",
+      "attackerPower": "1.85",
+      "defenderPower": "1.25",
+      "intensity": 0.9554187753633538,
+      "participants": [
+        "codey",
+        "uiax"
+      ],
+      "winner": "codey",
+      "defenderFitness": 0.95
+    },
+    {
+      "id": "war_74_1775992893726",
+      "tick": 74,
+      "attacker": "codey",
+      "defender": "uiax",
+      "attackerPower": "1.85",
+      "defenderPower": "1.25",
+      "intensity": 0.969274119867992,
+      "participants": [
+        "codey",
+        "uiax"
+      ],
+      "winner": "codey",
+      "defenderFitness": 0.95
+    },
+    {
+      "id": "war_77_1775992899729",
+      "tick": 77,
+      "attacker": "codey",
+      "defender": "uiax",
+      "attackerPower": "1.85",
+      "defenderPower": "1.25",
+      "intensity": 1.0548380930689623,
+      "participants": [
+        "codey",
+        "uiax"
+      ],
+      "winner": "codey",
+      "defenderFitness": 0.95
+    },
+    {
+      "id": "war_79_1775992903732",
+      "tick": 79,
+      "attacker": "uiax",
+      "defender": "codey",
+      "attackerPower": "1.85",
+      "defenderPower": "1.25",
+      "intensity": 0.9466225908494391,
+      "participants": [
+        "uiax",
+        "codey"
+      ],
+      "winner": "uiax",
+      "defenderFitness": 0.95
+    },
+    {
+      "id": "war_80_1775992905734",
+      "tick": 80,
+      "attacker": "codey",
+      "defender": "uiax",
+      "attackerPower": "1.85",
+      "defenderPower": "1.25",
+      "intensity": 1.0556437114502222,
+      "participants": [
+        "codey",
+        "uiax"
+      ],
+      "winner": "codey",
+      "defenderFitness": 0.95
+    },
+    {
+      "id": "war_81_1775992907735",
+      "tick": 81,
+      "attacker": "codey",
+      "defender": "uiax",
+      "attackerPower": "1.85",
+      "defenderPower": "1.25",
+      "intensity": 0.9770270432848669,
+      "participants": [
+        "codey",
+        "uiax"
+      ],
+      "winner": "uiax",
+      "defenderFitness": 0.95
+    },
+    {
+      "id": "war_86_1775992917747",
+      "tick": 86,
+      "attacker": "garlic",
+      "defender": "uiax",
+      "attackerPower": "1.77",
+      "defenderPower": "1.25",
+      "intensity": 0.9562173936606013,
+      "participants": [
+        "garlic",
+        "uiax"
+      ],
+      "winner": "garlic",
+      "defenderFitness": 0.95
+    },
+    {
+      "id": "war_88_1775992921750",
+      "tick": 88,
+      "attacker": "uiax",
+      "defender": "codey",
+      "attackerPower": "1.85",
+      "defenderPower": "1.25",
+      "intensity": 0.9912656404198905,
+      "participants": [
+        "uiax",
+        "codey"
+      ],
+      "winner": "codey",
+      "defenderFitness": 0.95
+    },
+    {
+      "id": "war_89_1775992923753",
+      "tick": 89,
+      "attacker": "garlic",
+      "defender": "uiax",
+      "attackerPower": "1.85",
+      "defenderPower": "1.25",
+      "intensity": 0.8881871738405546,
+      "participants": [
+        "garlic",
+        "uiax"
+      ],
+      "winner": "garlic",
+      "defenderFitness": 0.95
+    },
+    {
+      "id": "war_90_1775992925752",
+      "tick": 90,
+      "attacker": "garlic",
+      "defender": "codey",
+      "attackerPower": "1.85",
+      "defenderPower": "1.25",
+      "intensity": 1.002568696249771,
+      "participants": [
+        "garlic",
+        "codey"
+      ],
+      "winner": "codey",
+      "defenderFitness": 0.95
+    },
+    {
+      "id": "war_95_1775992935764",
+      "tick": 95,
+      "attacker": "garlic",
+      "defender": "codey",
+      "attackerPower": "1.85",
+      "defenderPower": "1.25",
+      "intensity": 0.9282646782327806,
+      "participants": [
+        "garlic",
+        "codey"
+      ],
+      "winner": "garlic",
+      "defenderFitness": 0.95
+    },
+    {
+      "id": "war_97_1775992939768",
+      "tick": 97,
+      "attacker": "codey",
+      "defender": "uiax",
+      "attackerPower": "1.85",
+      "defenderPower": "1.25",
+      "intensity": 1.1035016592029934,
+      "participants": [
+        "codey",
+        "uiax"
+      ],
+      "winner": "codey",
+      "defenderFitness": 0.95
+    },
+    {
+      "id": "war_98_1775992941771",
+      "tick": 98,
+      "attacker": "garlic",
+      "defender": "uiax",
+      "attackerPower": "1.85",
+      "defenderPower": "1.25",
+      "intensity": 0.892642714376318,
+      "participants": [
+        "garlic",
+        "uiax"
+      ],
+      "winner": "uiax",
+      "defenderFitness": 0.95
+    },
+    {
+      "id": "war_99_1775992943772",
+      "tick": 99,
+      "attacker": "uiax",
+      "defender": "codey",
+      "attackerPower": "1.85",
+      "defenderPower": "1.25",
+      "intensity": 1.1256116978314568,
+      "participants": [
+        "uiax",
+        "codey"
+      ],
+      "winner": "uiax",
+      "defenderFitness": 0.95
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "universes": [
+    {
+      "id": "u_1775993319558_p0s15a",
+      "parentId": null,
+      "tick": 0,
+      "fitness": -0.5887312935297155,
+      "state": {
+        "tick": 170,
+        "policy": {
+          "mutationRate": 0.2,
+          "selectionPressure": 0.6,
+          "explorationBias": 0.5
+        },
+        "world": {
+          "entropy": 0.3841622529321598,
+          "entities": 483,
+          "wars": 0,
+          "alliances": 0
+        },
+        "reward": {
+          "total": -43.13824923311721,
+          "last": -0.36389549893404205,
+          "smoothed": -0.3610232454553644
+        },
+        "agents": [
+          {
+            "name": "codey",
+            "fitness": 0.1,
+            "personality": {
+              "aggression": 0.6,
+              "curiosity": 0.7,
+              "risk": 0.5,
+              "stability": 0.6
+            },
+            "stats": {
+              "wins": 0,
+              "warsFought": 0,
+              "warsWon": 0
+            }
+          },
+          {
+            "name": "uiax",
+            "fitness": 0.17019124643529332,
+            "personality": {
+              "aggression": 0.3,
+              "curiosity": 0.8,
+              "risk": 0.4,
+              "stability": 0.7
+            },
+            "stats": {
+              "wins": 0,
+              "warsFought": 0,
+              "warsWon": 0
+            }
+          },
+          {
+            "name": "garlic",
+            "fitness": 0.13812225676258055,
+            "personality": {
+              "aggression": 0.2,
+              "curiosity": 0.3,
+              "risk": 0.2,
+              "stability": 0.9
+            },
+            "stats": {
+              "wins": 0,
+              "warsFought": 0,
+              "warsWon": 0
+            }
+          }
+        ]
+      },
+      "childrenIds": []
+    }
+  ],
+  "timestamp": 1775993659914
+}

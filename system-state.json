@@ -1,0 +1,31 @@
+{
+  "timestamp": 1776085700044,
+  "services": {
+    "swarm-master": {
+      "port": 3003,
+      "file": "swarm-v127.js",
+      "status": false,
+      "pid": null
+    },
+    "simple-core": {
+      "port": 3000,
+      "file": "simple-core.js",
+      "status": false,
+      "pid": null
+    },
+    "game-server": {
+      "port": 3001,
+      "file": "game-build/server.js",
+      "status": false,
+      "pid": null
+    },
+    "revive-engine": {
+      "port": null,
+      "file": "revive.js",
+      "status": false,
+      "pid": null
+    }
+  },
+  "warfareCores": [],
+  "systemUptime": 0.161312604
+}

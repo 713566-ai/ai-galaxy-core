@@ -1,0 +1,30 @@
+{
+  "universes": [
+    {
+      "id": "u_1775993671257_41gnh9",
+      "parentId": null,
+      "tick": 0,
+      "fitness": 0.22176851950872173,
+      "hasGod": false,
+      "physics": {
+        "rewardScale": 1,
+        "entropyGrowth": 0.01,
+        "warProbability": 0.08,
+        "mutationPressure": 0.2,
+        "godInfluence": 0
+      },
+      "state": {
+        "world": {
+          "entropy": 0.5340688604717736,
+          "entities": 501,
+          "wars": 0.7000000000000001,
+          "alliances": 0
+        },
+        "reward": {
+          "smoothed": 0.03263013097976723
+        }
+      }
+    }
+  ],
+  "timestamp": 1775993851438
+}

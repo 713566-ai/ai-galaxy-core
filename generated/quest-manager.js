@@ -1,0 +1,1 @@
+class QuestSystem { generate() { return { title: 'New Quest', reward: 100 }; } } module.exports = { QuestSystem };

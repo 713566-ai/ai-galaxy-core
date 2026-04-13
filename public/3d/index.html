@@ -3,44 +3,28 @@
 <head>
     <title>AI Galaxy Core - 3D MMO</title>
     <style>
-        body { margin: 0; overflow: hidden; font-family: 'Orbitron', monospace; }
+        body { margin: 0; overflow: hidden; font-family: monospace; }
         #ui {
             position: absolute;
             top: 20px;
             left: 20px;
             background: rgba(0,0,0,0.8);
-            backdrop-filter: blur(10px);
             color: #0f0;
-            padding: 15px 25px;
-            border-radius: 15px;
+            padding: 15px;
+            border-radius: 10px;
             z-index: 100;
             font-size: 14px;
             border: 1px solid #0f0;
         }
-        .stats-value { color: #ff0; font-weight: bold; font-size: 18px; }
-        #controls {
-            position: absolute;
-            bottom: 20px;
-            left: 20px;
-            background: rgba(0,0,0,0.6);
-            padding: 10px 15px;
-            border-radius: 10px;
-            z-index: 100;
-            font-size: 11px;
-            color: #aaa;
-        }
-        button { background: #0f0; color: #000; border: none; padding: 5px 10px; margin: 5px; cursor: pointer; border-radius: 5px; }
+        .value { color: #ff0; font-weight: bold; }
     </style>
 </head>
 <body>
     <div id="ui">
         🚀 AI GALAXY CORE | <span id="status">🌐 CONNECTING...</span><br>
-        💰 БОГАТСТВО: <span id="wealth" class="stats-value">0</span><br>
-        👥 НАСЕЛЕНИЕ: <span id="population" class="stats-value">0</span><br>
-        🧬 ЭНТРОПИЯ: <span id="entropy" class="stats-value">0</span>%
-    </div>
-    <div id="controls">
-        🎮 МЫШЬ/ПАЛЕЦ - вращать | ЗУМ - приблизить
+        💰 БОГАТСТВО: <span id="wealth" class="value">0</span><br>
+        👥 НАСЕЛЕНИЕ: <span id="population" class="value">0</span><br>
+        🧬 ЭНТРОПИЯ: <span id="entropy" class="value">0</span>%
     </div>
 
     <script type="importmap">
@@ -72,12 +56,10 @@
         
         const controls = new OrbitControls(camera, renderer.domElement);
         controls.enableDamping = true;
-        controls.autoRotate = false;
-        controls.enableZoom = true;
         
         // Планета
         const geometry = new THREE.SphereGeometry(2.5, 128, 128);
-        const material = new THREE.MeshStandardMaterial({ color: 0x44aa88, metalness: 0.3, roughness: 0.5, emissive: 0x114422 });
+        const material = new THREE.MeshStandardMaterial({ color: 0x44aa88, metalness: 0.3, roughness: 0.5 });
         const planet = new THREE.Mesh(geometry, material);
         scene.add(planet);
         
@@ -91,7 +73,6 @@
         const div = document.createElement('div');
         div.textContent = '🌍 ЗЕМЛЯ';
         div.style.color = '#0f0';
-        div.style.fontSize = '20px';
         div.style.background = 'rgba(0,0,0,0.6)';
         div.style.padding = '5px 15px';
         div.style.borderRadius = '30px';
@@ -132,20 +113,29 @@
         
         async function fetchData() {
             try {
-                const res = await fetch('/api/dashboard');
+                // Используем /api/memory для получения данных
+                const res = await fetch('/api/memory');
                 const data = await res.json();
-                document.getElementById('wealth').innerHTML = data.gameState?.wealth || 0;
-                document.getElementById('population').innerHTML = data.gameState?.population || 0;
-                document.getElementById('status').innerHTML = '✅ CONNECTED';
+                
+                if (data && data.world) {
+                    document.getElementById('wealth').innerHTML = (data.world.entities * 100 || 50000).toLocaleString();
+                    document.getElementById('population').innerHTML = data.world.entities || 500;
+                    document.getElementById('entropy').innerHTML = ((data.world.entropy || 0.5) * 100).toFixed(1);
+                    document.getElementById('status').innerHTML = '✅ CONNECTED';
+                    document.getElementById('status').style.color = '#0f0';
+                } else {
+                    document.getElementById('status').innerHTML = '⚠️ WAITING FOR DATA';
+                    document.getElementById('status').style.color = '#ff0';
+                }
             } catch(e) {
                 document.getElementById('status').innerHTML = '⚠️ NO SERVER';
+                document.getElementById('status').style.color = '#f00';
+                document.getElementById('wealth').innerHTML = '50,000';
+                document.getElementById('population').innerHTML = '500';
+                document.getElementById('entropy').innerHTML = '50.0';
             }
-            try {
-                const res = await fetch('/api/god/universe');
-                const data = await res.json();
-                document.getElementById('entropy').innerHTML = data.entropy ? (data.entropy * 100).toFixed(1) : '0';
-            } catch(e) {}
         }
+        
         fetchData();
         setInterval(fetchData, 3000);
         

@@ -1,276 +1,145 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Клиентский дашборд - AI Galaxy Core</title>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>AI Galaxy Core - Master Dashboard</title>
+    <meta charset="utf-8">
+    <meta http-equiv="refresh" content="5">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-            color: white;
-            padding: 20px;
-        }
-
-        .container {
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        .header {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-
-        .header h1 {
-            font-size: 2em;
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 20px;
-            margin-bottom: 20px;
-        }
-
-        .card {
-            background: rgba(255,255,255,0.1);
-            backdrop-filter: blur(10px);
-            border-radius: 15px;
-            padding: 20px;
-        }
-
-        .card h2 {
-            margin-bottom: 15px;
-            border-left: 3px solid #4CAF50;
-            padding-left: 15px;
-        }
-
-        .stat-value {
-            font-size: 2.5em;
-            font-weight: bold;
-            color: #4CAF50;
-        }
-
-        .market-item {
-            display: flex;
-            justify-content: space-between;
-            padding: 10px;
-            border-bottom: 1px solid rgba(255,255,255,0.1);
-        }
-
-        .market-price {
-            font-weight: bold;
-            color: #FFD700;
-        }
-
-        .agent-card {
-            background: rgba(0,0,0,0.3);
-            padding: 10px;
-            margin: 5px 0;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: background 0.3s;
-        }
-
-        .agent-card:hover {
-            background: rgba(76,175,80,0.3);
-        }
-
-        canvas {
-            max-height: 300px;
-            width: 100%;
-        }
-
-        button {
-            background: #4CAF50;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 8px;
-            cursor: pointer;
-            margin: 5px;
-        }
-
-        button:hover {
-            transform: scale(1.02);
-        }
-
-        .refresh-btn {
-            background: #2196F3;
-        }
-
-        .api-key {
-            background: rgba(0,0,0,0.5);
-            padding: 10px;
-            border-radius: 8px;
-            font-family: monospace;
-            word-break: break-all;
-        }
-
-        .footer {
-            text-align: center;
-            margin-top: 30px;
-            padding: 20px;
-            opacity: 0.7;
-        }
+        body { background: #0a0a2a; color: #0f0; font-family: monospace; padding: 20px; }
+        h1 { text-align: center; text-shadow: 0 0 10px #0f0; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+        .card { border: 1px solid #0f0; border-radius: 10px; padding: 15px; background: rgba(0,0,0,0.7); }
+        .online { color: #0f0; }
+        .offline { color: #f00; }
+        .metric { margin: 8px 0; }
+        .value { color: #ff0; font-weight: bold; }
+        .entropy-bar { background: #333; height: 10px; border-radius: 5px; overflow: hidden; margin: 5px 0; }
+        .entropy-fill { background: linear-gradient(90deg, #0f0, #ff0, #f00); height: 100%; width: 0%; }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <h1>🚀 AI Galaxy Core - Клиентский дашборд</h1>
-            <p>Реальное время | AI агенты | Динамическая экономика</p>
-        </div>
-
-        <div class="grid">
-            <div class="card">
-                <h2>📊 Статистика мира</h2>
-                <div id="stats">Загрузка...</div>
-            </div>
-            <div class="card">
-                <h2>💰 Рынок ресурсов</h2>
-                <div id="market">Загрузка...</div>
-            </div>
-        </div>
-
-        <div class="grid">
-            <div class="card">
-                <h2>📈 История популяции</h2>
-                <canvas id="populationChart"></canvas>
-            </div>
-            <div class="card">
-                <h2>💎 История богатства</h2>
-                <canvas id="wealthChart"></canvas>
-            </div>
-        </div>
-
+    <h1>🚀 AI GALAXY CORE - MASTER DASHBOARD</h1>
+    
+    <div class="grid">
         <div class="card">
-            <h2>🏆 Топ-10 агентов</h2>
-            <div id="topAgents" style="max-height: 400px; overflow-y: auto;"></div>
+            <h2>🖥️ CORE (3000)</h2>
+            <div id="core">Загрузка...</div>
         </div>
-
         <div class="card">
-            <h2>🔑 Ваш API доступ</h2>
-            <div class="api-key" id="apiInfo"></div>
-            <button class="refresh-btn" onclick="refreshData()">🔄 Обновить данные</button>
-            <button onclick="copyApiKey()">📋 Скопировать API ключ</button>
+            <h2>🌌 GOD CORE (5400)</h2>
+            <div id="god">Загрузка...</div>
         </div>
-
-        <div class="footer">
-            <p>© 2024 AI Galaxy Core | <a href="/" style="color: white;">На главную</a> | <a href="/api/status" style="color: white;">API статус</a></p>
+        <div class="card">
+            <h2>🤖 DEVAGENT (4000)</h2>
+            <div id="dev">Загрузка...</div>
+        </div>
+        <div class="card">
+            <h2>🔍 MONITORING (5000)</h2>
+            <div id="mon">Загрузка...</div>
+        </div>
+        <div class="card">
+            <h2>🧠 SUPER CORE (7000)</h2>
+            <div id="super">Загрузка...</div>
+        </div>
+        <div class="card">
+            <h2>🧬 ЭВОЛЮЦИЯ</h2>
+            <div id="evolution">Загрузка...</div>
         </div>
     </div>
-
+    
     <script>
-        let populationChart, wealthChart;
-        let currentApiKey = 'demo-key-' + Math.random().toString(36).substr(2, 16);
-
-        async function fetchAPI(endpoint) {
-            const response = await fetch(endpoint);
-            return await response.json();
-        }
-
-        async function refreshData() {
+        async function checkPort(url, elementId, name) {
             try {
-                const status = await fetchAPI('/api/status');
-                document.getElementById('stats').innerHTML = `
-                    <div class="stat-value">🎮 Поколение ${status.generation}</div>
-                    <div class="stat-value">👥 Население ${status.population}</div>
-                    <div>💰 Среднее богатство: ${status.stats.avgWealth}</div>
-                    <div>⚡ Средняя энергия: ${status.stats.avgEnergy}</div>
-                    <div>🔬 Уровень технологий: ${status.stats.avgTech || 0}</div>
-                `;
-
-                const market = await fetchAPI('/api/market');
-                let marketHtml = '';
-                const icons = { energy: '⚡', minerals: '⛏️', food: '🌾', tech: '🔬', crystals: '💎' };
-                for (const [resource, price] of Object.entries(market.prices || market)) {
-                    marketHtml += `<div class="market-item">
-                        <span>${icons[resource] || '💰'} ${resource.toUpperCase()}</span>
-                        <span class="market-price">💰 ${Math.floor(price)}</span>
-                    </div>`;
-                }
-                document.getElementById('market').innerHTML = marketHtml;
-
-                const agents = await fetchAPI('/api/agents');
-                let agentsHtml = '';
-                agents.agents.slice(0, 10).forEach((agent, i) => {
-                    agentsHtml += `<div class="agent-card" onclick="showAgentDetails(${agent.id})">
-                        <strong>${i+1}. #${agent.id}</strong> | ${agent.role.toUpperCase()} | ${agent.faction?.toUpperCase() || 'N/A'}<br>
-                        💰 ${agent.wealth} | ⚡ ${agent.energy} | 🎂 ${agent.age}
-                    </div>`;
-                });
-                document.getElementById('topAgents').innerHTML = agentsHtml;
-
-                const history = await fetchAPI('/api/history');
-                
-                if (populationChart) populationChart.destroy();
-                const popCtx = document.getElementById('populationChart').getContext('2d');
-                populationChart = new Chart(popCtx, {
-                    type: 'line',
-                    data: {
-                        labels: history.population?.map(p => p.step) || [],
-                        datasets: [{
-                            label: 'Популяция',
-                            data: history.population?.map(p => p.value) || [],
-                            borderColor: '#4CAF50',
-                            backgroundColor: 'rgba(76,175,80,0.1)',
-                            tension: 0.4
-                        }]
-                    },
-                    options: { responsive: true, maintainAspectRatio: true }
-                });
-
-                if (wealthChart) wealthChart.destroy();
-                const wealthCtx = document.getElementById('wealthChart').getContext('2d');
-                wealthChart = new Chart(wealthCtx, {
-                    type: 'line',
-                    data: {
-                        labels: history.avgWealth?.map(w => w.step) || [],
-                        datasets: [{
-                            label: 'Среднее богатство',
-                            data: history.avgWealth?.map(w => w.value) || [],
-                            borderColor: '#FFD700',
-                            backgroundColor: 'rgba(255,215,0,0.1)',
-                            tension: 0.4
-                        }]
-                    },
-                    options: { responsive: true, maintainAspectRatio: true }
-                });
-
-                document.getElementById('apiInfo').innerHTML = `
-                    <strong>Ваш API ключ:</strong> ${currentApiKey}<br>
-                    <strong>API эндпоинты:</strong><br>
-                    • GET /api/status - статус мира<br>
-                    • GET /api/agents - список агентов<br>
-                    • GET /api/market - цены рынка<br>
-                    • GET /api/history - исторические данные
-                `;
-
+                const res = await fetch(url, { mode: 'no-cors' });
+                document.getElementById(elementId).innerHTML = `<span class="online">✅ ${name} ONLINE</span>`;
             } catch(e) {
-                console.error('Ошибка загрузки:', e);
+                document.getElementById(elementId).innerHTML = `<span class="offline">❌ ${name} OFFLINE</span>`;
             }
         }
-
-        function showAgentDetails(id) {
-            alert(`Детали агента #${id}\nФункция в разработке`);
+        
+        async function loadCore() {
+            try {
+                const res = await fetch('/api/status');
+                const data = await res.json();
+                const tick = data.loop?.tick || 0;
+                const rules = data.loop?.rules || {};
+                document.getElementById('core').innerHTML = `
+                    <div class="metric">🔄 Тик: <span class="value">${tick}</span></div>
+                    <div class="metric">🧬 Mutation: ${rules.mutationRate || 0}</div>
+                    <div class="metric">⚖️ Selection: ${rules.selectionPressure || 0}</div>
+                    <div class="metric">🏃 Состояние: ${data.loop?.running ? '✅ RUNNING' : '⏸️ STOPPED'}</div>
+                `;
+            } catch(e) {
+                document.getElementById('core').innerHTML = '<span class="offline">❌ CORE OFFLINE</span>';
+            }
         }
-
-        function copyApiKey() {
-            navigator.clipboard.writeText(currentApiKey);
-            alert('✅ API ключ скопирован!');
+        
+        async function loadGod() {
+            try {
+                const res = await fetch('http://localhost:5400/status');
+                const data = await res.json();
+                const entropyPercent = (data.entropy * 100).toFixed(1);
+                document.getElementById('god').innerHTML = `
+                    <div class="metric">🌀 Энтропия: <span class="value">${entropyPercent}%</span></div>
+                    <div class="entropy-bar"><div class="entropy-fill" style="width: ${entropyPercent}%"></div></div>
+                    <div class="metric">👥 Сущности: <span class="value">${data.entities}</span></div>
+                    <div class="metric">⚔️ Войн: ${data.wars}</div>
+                    <div class="metric">🤝 Альянсов: ${data.alliances}</div>
+                `;
+            } catch(e) {
+                document.getElementById('god').innerHTML = '<span class="offline">❌ GOD CORE OFFLINE</span>';
+            }
         }
-
-        refreshData();
-        setInterval(refreshData, 10000);
+        
+        async function loadEvolution() {
+            try {
+                const res = await fetch('/api/memory');
+                const data = await res.json();
+                const entropy = data.world?.entropy || 0.5;
+                const entropyPercent = (entropy * 100).toFixed(1);
+                document.getElementById('evolution').innerHTML = `
+                    <div class="metric">📊 Тик памяти: ${data.tick || 0}</div>
+                    <div class="metric">🌀 Энтропия: ${entropyPercent}%</div>
+                    <div class="entropy-bar"><div class="entropy-fill" style="width: ${entropyPercent}%"></div></div>
+                    <div class="metric">👥 Сущности: ${data.world?.entities || 0}</div>
+                    <div class="metric">⚔️ Войн: ${data.world?.wars || 0}</div>
+                `;
+            } catch(e) {
+                document.getElementById('evolution').innerHTML = '<span class="offline">❌ НЕТ ДАННЫХ</span>';
+            }
+        }
+        
+        loadCore();
+        loadGod();
+        loadEvolution();
+        setInterval(() => { loadCore(); loadGod(); loadEvolution(); }, 3000);
     </script>
 </body>
 </html>
+<!-- Добавить в дашборд блок V66 -->
+<div class="card">
+    <h2>🧠 V66 ADAPTIVE INTELLIGENCE</h2>
+    <div id="v66">Загрузка...</div>
+</div>
+
+<script>
+async function loadV66() {
+    try {
+        const res = await fetch('/api/v66/state');
+        const data = await res.json();
+        document.getElementById('v66').innerHTML = `
+            <div class="metric">🎯 Policy: MR=${data.policy?.mutationRate?.toFixed(3) || 'N/A'}, SP=${data.policy?.selectionPressure?.toFixed(3) || 'N/A'}</div>
+            <div class="metric">📚 Опыт: ${data.experienceSize || 0} шагов</div>
+            <div class="metric">🏆 Общая награда: ${data.totalReward || 0}</div>
+            <div class="metric">📈 Средняя награда: ${data.averageReward || 0}</div>
+            <div class="metric">🔄 Адаптаций: ${data.adaptationCount || 0}</div>
+            <div class="metric">⭐ Последняя награда: ${data.lastReward?.toFixed(3) || 0}</div>
+        `;
+    } catch(e) {
+        document.getElementById('v66').innerHTML = '<span class="offline">❌ V66 OFFLINE</span>';
+    }
+}
+
+// Добавить в setInterval
+setInterval(() => { loadV66(); }, 5000);
+</script>

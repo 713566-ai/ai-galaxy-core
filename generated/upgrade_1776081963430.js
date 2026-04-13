@@ -1,0 +1,1 @@
+class GameMode { constructor() { this.name = 'upgrade_1776081963430'; } update() { return { players: Math.floor(Math.random() * 100) }; } } module.exports = { GameMode };

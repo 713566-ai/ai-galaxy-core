@@ -1,0 +1,13 @@
+{
+  "name": "galaxy-universe-online",
+  "version": "1.0.0",
+  "description": "🌌 Galaxy Universe Online - Multiplayer Strategy Game",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.0",
+    "ws": "^8.14.0"
+  }
+}
